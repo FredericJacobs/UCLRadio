@@ -29,9 +29,13 @@
     return dateFormatter;
 }
 
+- (void) viewDidLoad{
+    appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    [appDelegate initializeArray];
+}
+
 // When the view appears, update the title and table contents.
 - (void)viewWillAppear:(BOOL)animated {
-    appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     self.title = show.name;
     [self.tableView reloadData];
 }
@@ -43,7 +47,26 @@
 
 
 - (void)tableView:(UITableView *)table didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    [appDelegate addShow:show];
+    if ([indexPath row] == 3){
+        
+    if ([appDelegate isSubscribedTo:show]){
+    
+        [appDelegate removeShow:show];
+        
+        [[[table cellForRowAtIndexPath:indexPath] textLabel]setText:@"Subscribe"];
+        
+    }
+    
+    else {
+        
+        [appDelegate addShow:show];
+        [[[table cellForRowAtIndexPath:indexPath] textLabel] setText:@"You are already subscribed"];
+        
+        
+    }
+    }
+    
+    [[table cellForRowAtIndexPath:indexPath] setSelected:FALSE];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)table cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -54,25 +77,55 @@
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
     }
     switch (indexPath.row) {
-        case 0: {
+        case 1: {
             cell.textLabel.text = NSLocalizedString(@"Starts at ", @"album label");
             cell.detailTextLabel.text = show.startTime;
         } break;
-        case 1: {
-            cell.textLabel.text = NSLocalizedString(@"artist", @"artist label");
+        case 2: {
+            cell.textLabel.text = NSLocalizedString(@"Ends at", @"artist label");
             cell.detailTextLabel.text = show.endTime;
         } break;
-        case 2: {
-            cell.textLabel.text = NSLocalizedString(@"category", @"category label");
-            cell.detailTextLabel.text = show.dayOfTheWeek;
+        case 0: {
+            cell.textLabel.text = NSLocalizedString(@"Weekday", @"category label");
+            int i = [[show dayOfTheWeek]intValue];
+            switch (i) {
+                case 1:{cell.detailTextLabel.text = @"Sunday";}
+                    break;
+                    
+                case 2:{cell.detailTextLabel.text = @"Monday";}
+                    break;
+                    
+                case 3:{cell.detailTextLabel.text = @"Tuesday";}
+                    break;
+                case 4:{cell.detailTextLabel.text = @"Wednesday";}
+                    break;
+                case 5:{cell.detailTextLabel.text = @"Thursday";}
+                    break;
+                case 6:{cell.detailTextLabel.text = @"Friday";}
+                    break;
+                case 7:{cell.detailTextLabel.text = @"Saterday";}
+                    break;
+                default:
+                    break;
+            }
         } break;
         case 3: {
             cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:kCellIdentifier];
-            cell.textLabel.text = @"Subscribe";
             cell.textLabel.textAlignment = UITextAlignmentCenter;
-        }
-    }
-    return cell;
+            
+            
+            if ([appDelegate isSubscribedTo:show]){
+                cell.textLabel.text = @"You are already subscribed";
+                
+            }
+            
+            else {
+            
+           cell.textLabel.text = @"Subscribe";
+        
+            }
+}
+    }   return cell;
 }
 
 

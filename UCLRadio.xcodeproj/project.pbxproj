@@ -43,6 +43,7 @@
 		F45224CB147E9329000A94F5 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F45224C9147E927E000A94F5 /* AudioToolbox.framework */; };
 		F45224CC147E936D000A94F5 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F45224A5147E8F75000A94F5 /* AVFoundation.framework */; };
 		F45224CF147E9386000A94F5 /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F45224CD147E937C000A94F5 /* Twitter.framework */; };
+		F4CC507B147EA8A000530C84 /* loadingbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = F4CC507A147EA8A000530C84 /* loadingbutton.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -93,6 +94,7 @@
 		F45224B8147E90D6000A94F5 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		F45224C9147E927E000A94F5 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		F45224CD147E937C000A94F5 /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
+		F4CC507A147EA8A000530C84 /* loadingbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loadingbutton.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +149,7 @@
 		F4334D4D147E9C47004DC63D /* Buttons */ = {
 			isa = PBXGroup;
 			children = (
+				F4CC507A147EA8A000530C84 /* loadingbutton.png */,
 				F452246A147E8932000A94F5 /* playbutton.png */,
 				F452246F147E8932000A94F5 /* stopbutton.png */,
 				F4522470147E8932000A94F5 /* Tweet.png */,
@@ -167,11 +170,11 @@
 		F4522437147E88BB000A94F5 = {
 			isa = PBXGroup;
 			children = (
+				F452244C147E88BB000A94F5 /* UCLRadio */,
 				F452248B147E8990000A94F5 /* Views */,
 				F4522484147E8971000A94F5 /* Parser */,
 				F4522467147E890D000A94F5 /* Images */,
 				F452245D147E88D0000A94F5 /* Classes */,
-				F452244C147E88BB000A94F5 /* UCLRadio */,
 				F4522445147E88BB000A94F5 /* Frameworks */,
 				F4522443147E88BB000A94F5 /* Products */,
 			);
@@ -340,6 +343,7 @@
 				F4522497147E8B59000A94F5 /* MainWindow.xib in Resources */,
 				F4334D4A147E9C0B004DC63D /* Icon@2x.png in Resources */,
 				F4334D4B147E9C0B004DC63D /* Icon.png in Resources */,
+				F4CC507B147EA8A000530C84 /* loadingbutton.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

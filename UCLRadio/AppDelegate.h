@@ -26,6 +26,11 @@
 @property (nonatomic, retain) NSMutableArray *subscribedShows;
 
 - (void) addShow: (Show *)newShow ;
-- (BOOL) alreadySubscribedToShow: (Show *)aShow ;
+- (void) removeShow: (Show*)newShow ;
+- (void) initializeArray;
+- (BOOL) isSubscribedTo: (Show*)newShow;
+- (void) printToConsole;
+- (void) updateNotifications;
+
 
 @end
