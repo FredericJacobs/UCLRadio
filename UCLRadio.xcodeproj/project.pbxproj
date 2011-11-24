@@ -13,6 +13,34 @@
 		F4522451147E88BB000A94F5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F452244F147E88BB000A94F5 /* InfoPlist.strings */; };
 		F4522453147E88BB000A94F5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F4522452147E88BB000A94F5 /* main.m */; };
 		F4522457147E88BB000A94F5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F4522456147E88BB000A94F5 /* AppDelegate.m */; };
+		F4522464147E88F5000A94F5 /* AudioStreamer.m in Sources */ = {isa = PBXBuildFile; fileRef = F452245F147E88F5000A94F5 /* AudioStreamer.m */; };
+		F4522466147E88F5000A94F5 /* UCLRadioViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4522463147E88F5000A94F5 /* UCLRadioViewController.m */; };
+		F4522474147E8932000A94F5 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = F4522468147E8932000A94F5 /* Default.png */; };
+		F4522475147E8932000A94F5 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F4522469147E8932000A94F5 /* Default@2x.png */; };
+		F4522476147E8932000A94F5 /* playbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = F452246A147E8932000A94F5 /* playbutton.png */; };
+		F4522477147E8932000A94F5 /* playTabBar.png in Resources */ = {isa = PBXBuildFile; fileRef = F452246B147E8932000A94F5 /* playTabBar.png */; };
+		F4522478147E8932000A94F5 /* playTabBar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F452246C147E8932000A94F5 /* playTabBar@2x.png */; };
+		F4522479147E8932000A94F5 /* shows.png in Resources */ = {isa = PBXBuildFile; fileRef = F452246D147E8932000A94F5 /* shows.png */; };
+		F452247A147E8932000A94F5 /* shows@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F452246E147E8932000A94F5 /* shows@2x.png */; };
+		F452247B147E8932000A94F5 /* stopbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = F452246F147E8932000A94F5 /* stopbutton.png */; };
+		F452247C147E8932000A94F5 /* Tweet.png in Resources */ = {isa = PBXBuildFile; fileRef = F4522470147E8932000A94F5 /* Tweet.png */; };
+		F452247D147E8932000A94F5 /* Tweet@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F4522471147E8932000A94F5 /* Tweet@2x.png */; };
+		F452247E147E8932000A94F5 /* UCLMainScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = F4522472147E8932000A94F5 /* UCLMainScreen.png */; };
+		F452247F147E8932000A94F5 /* UCLMainScreen@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F4522473147E8932000A94F5 /* UCLMainScreen@2x.png */; };
+		F4522483147E895A000A94F5 /* CocoaXMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = F4522482147E895A000A94F5 /* CocoaXMLParser.m */; };
+		F4522489147E8983000A94F5 /* Show.m in Sources */ = {isa = PBXBuildFile; fileRef = F4522486147E8983000A94F5 /* Show.m */; };
+		F452248A147E8983000A94F5 /* ShowRSSParser.m in Sources */ = {isa = PBXBuildFile; fileRef = F4522488147E8983000A94F5 /* ShowRSSParser.m */; };
+		F452248F147E89BF000A94F5 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F452248D147E89BF000A94F5 /* SecondViewController.m */; };
+		F4522490147E89BF000A94F5 /* SecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F452248E147E89BF000A94F5 /* SecondViewController.xib */; };
+		F4522493147E8A11000A94F5 /* DetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4522492147E8A11000A94F5 /* DetailController.m */; };
+		F4522495147E8B46000A94F5 /* UCLRadioViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4522494147E8B46000A94F5 /* UCLRadioViewController.xib */; };
+		F4522497147E8B59000A94F5 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4522496147E8B59000A94F5 /* MainWindow.xib */; };
+		F45224B6147E90CA000A94F5 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F45224B3147E90A9000A94F5 /* CFNetwork.framework */; };
+		F45224B7147E90CA000A94F5 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F45224B1147E909D000A94F5 /* QuartzCore.framework */; };
+		F45224BA147E90DF000A94F5 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F45224B8147E90D6000A94F5 /* MediaPlayer.framework */; };
+		F45224CB147E9329000A94F5 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F45224C9147E927E000A94F5 /* AudioToolbox.framework */; };
+		F45224CC147E936D000A94F5 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F45224A5147E8F75000A94F5 /* AVFoundation.framework */; };
+		F45224CF147E9386000A94F5 /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F45224CD147E937C000A94F5 /* Twitter.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,12 +48,47 @@
 		F4522446147E88BB000A94F5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		F4522448147E88BB000A94F5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F452244A147E88BB000A94F5 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		F452244E147E88BB000A94F5 /* UCLRadio-Info.plist */ = {isa = PBXFileReference; path = "UCLRadio-Info.plist"; sourceTree = "<group>"; };
+		F452244E147E88BB000A94F5 /* UCLRadio-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "UCLRadio-Info.plist"; sourceTree = "<group>"; };
 		F4522450147E88BB000A94F5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F4522452147E88BB000A94F5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		F4522454147E88BB000A94F5 /* UCLRadio-Prefix.pch */ = {isa = PBXFileReference; path = "UCLRadio-Prefix.pch"; sourceTree = "<group>"; };
-		F4522455147E88BB000A94F5 /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		F4522454147E88BB000A94F5 /* UCLRadio-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UCLRadio-Prefix.pch"; sourceTree = "<group>"; };
+		F4522455147E88BB000A94F5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F4522456147E88BB000A94F5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		F452245E147E88F5000A94F5 /* AudioStreamer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioStreamer.h; sourceTree = "<group>"; };
+		F452245F147E88F5000A94F5 /* AudioStreamer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioStreamer.m; sourceTree = "<group>"; };
+		F4522462147E88F5000A94F5 /* UCLRadioViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UCLRadioViewController.h; sourceTree = "<group>"; };
+		F4522463147E88F5000A94F5 /* UCLRadioViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UCLRadioViewController.m; sourceTree = "<group>"; };
+		F4522468147E8932000A94F5 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		F4522469147E8932000A94F5 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		F452246A147E8932000A94F5 /* playbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = playbutton.png; sourceTree = "<group>"; };
+		F452246B147E8932000A94F5 /* playTabBar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = playTabBar.png; sourceTree = "<group>"; };
+		F452246C147E8932000A94F5 /* playTabBar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "playTabBar@2x.png"; sourceTree = "<group>"; };
+		F452246D147E8932000A94F5 /* shows.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shows.png; sourceTree = "<group>"; };
+		F452246E147E8932000A94F5 /* shows@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "shows@2x.png"; sourceTree = "<group>"; };
+		F452246F147E8932000A94F5 /* stopbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stopbutton.png; sourceTree = "<group>"; };
+		F4522470147E8932000A94F5 /* Tweet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Tweet.png; sourceTree = "<group>"; };
+		F4522471147E8932000A94F5 /* Tweet@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Tweet@2x.png"; sourceTree = "<group>"; };
+		F4522472147E8932000A94F5 /* UCLMainScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = UCLMainScreen.png; sourceTree = "<group>"; };
+		F4522473147E8932000A94F5 /* UCLMainScreen@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "UCLMainScreen@2x.png"; sourceTree = "<group>"; };
+		F4522481147E895A000A94F5 /* CocoaXMLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CocoaXMLParser.h; sourceTree = "<group>"; };
+		F4522482147E895A000A94F5 /* CocoaXMLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CocoaXMLParser.m; sourceTree = "<group>"; };
+		F4522485147E8983000A94F5 /* Show.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Show.h; sourceTree = "<group>"; };
+		F4522486147E8983000A94F5 /* Show.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Show.m; sourceTree = "<group>"; };
+		F4522487147E8983000A94F5 /* ShowRSSParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowRSSParser.h; sourceTree = "<group>"; };
+		F4522488147E8983000A94F5 /* ShowRSSParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowRSSParser.m; sourceTree = "<group>"; };
+		F452248C147E89BF000A94F5 /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		F452248D147E89BF000A94F5 /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		F452248E147E89BF000A94F5 /* SecondViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SecondViewController.xib; sourceTree = "<group>"; };
+		F4522491147E8A11000A94F5 /* DetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailController.h; sourceTree = "<group>"; };
+		F4522492147E8A11000A94F5 /* DetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailController.m; sourceTree = "<group>"; };
+		F4522494147E8B46000A94F5 /* UCLRadioViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = UCLRadioViewController.xib; path = UCLRadio/UCLRadioViewController.xib; sourceTree = "<group>"; };
+		F4522496147E8B59000A94F5 /* MainWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
+		F45224A5147E8F75000A94F5 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		F45224B1147E909D000A94F5 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		F45224B3147E90A9000A94F5 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		F45224B8147E90D6000A94F5 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		F45224C9147E927E000A94F5 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		F45224CD147E937C000A94F5 /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,9 +96,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F4522447147E88BB000A94F5 /* UIKit.framework in Frameworks */,
+				F45224CF147E9386000A94F5 /* Twitter.framework in Frameworks */,
+				F45224CC147E936D000A94F5 /* AVFoundation.framework in Frameworks */,
 				F4522449147E88BB000A94F5 /* Foundation.framework in Frameworks */,
+				F4522447147E88BB000A94F5 /* UIKit.framework in Frameworks */,
 				F452244B147E88BB000A94F5 /* CoreGraphics.framework in Frameworks */,
+				F45224B7147E90CA000A94F5 /* QuartzCore.framework in Frameworks */,
+				F45224B6147E90CA000A94F5 /* CFNetwork.framework in Frameworks */,
+				F45224CB147E9329000A94F5 /* AudioToolbox.framework in Frameworks */,
+				F45224BA147E90DF000A94F5 /* MediaPlayer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -45,6 +114,10 @@
 		F4522437147E88BB000A94F5 = {
 			isa = PBXGroup;
 			children = (
+				F452248B147E8990000A94F5 /* Views */,
+				F4522484147E8971000A94F5 /* Parser */,
+				F4522467147E890D000A94F5 /* Images */,
+				F452245D147E88D0000A94F5 /* Classes */,
 				F452244C147E88BB000A94F5 /* UCLRadio */,
 				F4522445147E88BB000A94F5 /* Frameworks */,
 				F4522443147E88BB000A94F5 /* Products */,
@@ -62,6 +135,12 @@
 		F4522445147E88BB000A94F5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F45224CD147E937C000A94F5 /* Twitter.framework */,
+				F45224C9147E927E000A94F5 /* AudioToolbox.framework */,
+				F45224B8147E90D6000A94F5 /* MediaPlayer.framework */,
+				F45224B3147E90A9000A94F5 /* CFNetwork.framework */,
+				F45224B1147E909D000A94F5 /* QuartzCore.framework */,
+				F45224A5147E8F75000A94F5 /* AVFoundation.framework */,
 				F4522446147E88BB000A94F5 /* UIKit.framework */,
 				F4522448147E88BB000A94F5 /* Foundation.framework */,
 				F452244A147E88BB000A94F5 /* CoreGraphics.framework */,
@@ -88,6 +167,63 @@
 				F4522454147E88BB000A94F5 /* UCLRadio-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F452245D147E88D0000A94F5 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				F4522481147E895A000A94F5 /* CocoaXMLParser.h */,
+				F4522482147E895A000A94F5 /* CocoaXMLParser.m */,
+				F452245E147E88F5000A94F5 /* AudioStreamer.h */,
+				F452245F147E88F5000A94F5 /* AudioStreamer.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		F4522467147E890D000A94F5 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				F4522468147E8932000A94F5 /* Default.png */,
+				F4522469147E8932000A94F5 /* Default@2x.png */,
+				F452246A147E8932000A94F5 /* playbutton.png */,
+				F452246B147E8932000A94F5 /* playTabBar.png */,
+				F452246C147E8932000A94F5 /* playTabBar@2x.png */,
+				F452246D147E8932000A94F5 /* shows.png */,
+				F452246E147E8932000A94F5 /* shows@2x.png */,
+				F452246F147E8932000A94F5 /* stopbutton.png */,
+				F4522470147E8932000A94F5 /* Tweet.png */,
+				F4522471147E8932000A94F5 /* Tweet@2x.png */,
+				F4522472147E8932000A94F5 /* UCLMainScreen.png */,
+				F4522473147E8932000A94F5 /* UCLMainScreen@2x.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		F4522484147E8971000A94F5 /* Parser */ = {
+			isa = PBXGroup;
+			children = (
+				F4522485147E8983000A94F5 /* Show.h */,
+				F4522486147E8983000A94F5 /* Show.m */,
+				F4522487147E8983000A94F5 /* ShowRSSParser.h */,
+				F4522488147E8983000A94F5 /* ShowRSSParser.m */,
+			);
+			name = Parser;
+			sourceTree = "<group>";
+		};
+		F452248B147E8990000A94F5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F4522496147E8B59000A94F5 /* MainWindow.xib */,
+				F4522494147E8B46000A94F5 /* UCLRadioViewController.xib */,
+				F4522462147E88F5000A94F5 /* UCLRadioViewController.h */,
+				F4522463147E88F5000A94F5 /* UCLRadioViewController.m */,
+				F452248C147E89BF000A94F5 /* SecondViewController.h */,
+				F452248D147E89BF000A94F5 /* SecondViewController.m */,
+				F452248E147E89BF000A94F5 /* SecondViewController.xib */,
+				F4522491147E8A11000A94F5 /* DetailController.h */,
+				F4522492147E8A11000A94F5 /* DetailController.m */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,6 +277,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				F4522451147E88BB000A94F5 /* InfoPlist.strings in Resources */,
+				F4522474147E8932000A94F5 /* Default.png in Resources */,
+				F4522475147E8932000A94F5 /* Default@2x.png in Resources */,
+				F4522476147E8932000A94F5 /* playbutton.png in Resources */,
+				F4522477147E8932000A94F5 /* playTabBar.png in Resources */,
+				F4522478147E8932000A94F5 /* playTabBar@2x.png in Resources */,
+				F4522479147E8932000A94F5 /* shows.png in Resources */,
+				F452247A147E8932000A94F5 /* shows@2x.png in Resources */,
+				F452247B147E8932000A94F5 /* stopbutton.png in Resources */,
+				F452247C147E8932000A94F5 /* Tweet.png in Resources */,
+				F452247D147E8932000A94F5 /* Tweet@2x.png in Resources */,
+				F452247E147E8932000A94F5 /* UCLMainScreen.png in Resources */,
+				F452247F147E8932000A94F5 /* UCLMainScreen@2x.png in Resources */,
+				F4522490147E89BF000A94F5 /* SecondViewController.xib in Resources */,
+				F4522495147E8B46000A94F5 /* UCLRadioViewController.xib in Resources */,
+				F4522497147E8B59000A94F5 /* MainWindow.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -153,6 +304,13 @@
 			files = (
 				F4522453147E88BB000A94F5 /* main.m in Sources */,
 				F4522457147E88BB000A94F5 /* AppDelegate.m in Sources */,
+				F4522464147E88F5000A94F5 /* AudioStreamer.m in Sources */,
+				F4522466147E88F5000A94F5 /* UCLRadioViewController.m in Sources */,
+				F4522483147E895A000A94F5 /* CocoaXMLParser.m in Sources */,
+				F4522489147E8983000A94F5 /* Show.m in Sources */,
+				F452248A147E8983000A94F5 /* ShowRSSParser.m in Sources */,
+				F452248F147E89BF000A94F5 /* SecondViewController.m in Sources */,
+				F4522493147E8A11000A94F5 /* DetailController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,7 +377,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "UCLRadio/UCLRadio-Prefix.pch";
 				INFOPLIST_FILE = "UCLRadio/UCLRadio-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -230,7 +390,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "UCLRadio/UCLRadio-Prefix.pch";
 				INFOPLIST_FILE = "UCLRadio/UCLRadio-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

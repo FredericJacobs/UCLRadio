@@ -7,9 +7,25 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Show.h"
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@class UCLRadioViewController;
+@class SecondViewController;
 
-@property (strong, nonatomic) UIWindow *window;
+@interface AppDelegate : NSObject <UIApplicationDelegate> {
+    UIWindow *window;
+    IBOutlet UCLRadioViewController *viewController;
+    UIBackgroundTaskIdentifier bgTask;
+    IBOutlet SecondViewController *secondViewController;
+    NSMutableArray *subscribedShows;
+}
+
+@property (nonatomic, retain) IBOutlet UIWindow *window;
+@property (nonatomic, retain) IBOutlet UCLRadioViewController *viewController;
+@property (nonatomic, retain) IBOutlet SecondViewController *secondViewController;
+@property (nonatomic, retain) NSMutableArray *subscribedShows;
+
+- (void) addShow: (Show *)newShow ;
+- (BOOL) alreadySubscribedToShow: (Show *)aShow ;
 
 @end
