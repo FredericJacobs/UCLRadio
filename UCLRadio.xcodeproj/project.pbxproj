@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F4334D4A147E9C0B004DC63D /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F4334D48147E9C0B004DC63D /* Icon@2x.png */; };
+		F4334D4B147E9C0B004DC63D /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = F4334D49147E9C0B004DC63D /* Icon.png */; };
 		F4522447147E88BB000A94F5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4522446147E88BB000A94F5 /* UIKit.framework */; };
 		F4522449147E88BB000A94F5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4522448147E88BB000A94F5 /* Foundation.framework */; };
 		F452244B147E88BB000A94F5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F452244A147E88BB000A94F5 /* CoreGraphics.framework */; };
@@ -44,6 +46,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F4334D48147E9C0B004DC63D /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		F4334D49147E9C0B004DC63D /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		F4522442147E88BB000A94F5 /* UCLRadio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UCLRadio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4522446147E88BB000A94F5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		F4522448147E88BB000A94F5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -111,6 +115,55 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F4334D45147E9BEA004DC63D /* Icons */ = {
+			isa = PBXGroup;
+			children = (
+				F4334D48147E9C0B004DC63D /* Icon@2x.png */,
+				F4334D49147E9C0B004DC63D /* Icon.png */,
+			);
+			name = Icons;
+			sourceTree = "<group>";
+		};
+		F4334D47147E9BF4004DC63D /* Default (Splash Screen) */ = {
+			isa = PBXGroup;
+			children = (
+				F4522468147E8932000A94F5 /* Default.png */,
+				F4522469147E8932000A94F5 /* Default@2x.png */,
+			);
+			name = "Default (Splash Screen)";
+			sourceTree = "<group>";
+		};
+		F4334D4C147E9C2B004DC63D /* Tab Bar Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				F452246B147E8932000A94F5 /* playTabBar.png */,
+				F452246C147E8932000A94F5 /* playTabBar@2x.png */,
+				F452246D147E8932000A94F5 /* shows.png */,
+				F452246E147E8932000A94F5 /* shows@2x.png */,
+			);
+			name = "Tab Bar Buttons";
+			sourceTree = "<group>";
+		};
+		F4334D4D147E9C47004DC63D /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				F452246A147E8932000A94F5 /* playbutton.png */,
+				F452246F147E8932000A94F5 /* stopbutton.png */,
+				F4522470147E8932000A94F5 /* Tweet.png */,
+				F4522471147E8932000A94F5 /* Tweet@2x.png */,
+			);
+			name = Buttons;
+			sourceTree = "<group>";
+		};
+		F4334D4E147E9C56004DC63D /* Main Screen */ = {
+			isa = PBXGroup;
+			children = (
+				F4522472147E8932000A94F5 /* UCLMainScreen.png */,
+				F4522473147E8932000A94F5 /* UCLMainScreen@2x.png */,
+			);
+			name = "Main Screen";
+			sourceTree = "<group>";
+		};
 		F4522437147E88BB000A94F5 = {
 			isa = PBXGroup;
 			children = (
@@ -183,18 +236,11 @@
 		F4522467147E890D000A94F5 /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				F4522468147E8932000A94F5 /* Default.png */,
-				F4522469147E8932000A94F5 /* Default@2x.png */,
-				F452246A147E8932000A94F5 /* playbutton.png */,
-				F452246B147E8932000A94F5 /* playTabBar.png */,
-				F452246C147E8932000A94F5 /* playTabBar@2x.png */,
-				F452246D147E8932000A94F5 /* shows.png */,
-				F452246E147E8932000A94F5 /* shows@2x.png */,
-				F452246F147E8932000A94F5 /* stopbutton.png */,
-				F4522470147E8932000A94F5 /* Tweet.png */,
-				F4522471147E8932000A94F5 /* Tweet@2x.png */,
-				F4522472147E8932000A94F5 /* UCLMainScreen.png */,
-				F4522473147E8932000A94F5 /* UCLMainScreen@2x.png */,
+				F4334D47147E9BF4004DC63D /* Default (Splash Screen) */,
+				F4334D45147E9BEA004DC63D /* Icons */,
+				F4334D4D147E9C47004DC63D /* Buttons */,
+				F4334D4C147E9C2B004DC63D /* Tab Bar Buttons */,
+				F4334D4E147E9C56004DC63D /* Main Screen */,
 			);
 			name = Images;
 			sourceTree = "<group>";
@@ -292,6 +338,8 @@
 				F4522490147E89BF000A94F5 /* SecondViewController.xib in Resources */,
 				F4522495147E8B46000A94F5 /* UCLRadioViewController.xib in Resources */,
 				F4522497147E8B59000A94F5 /* MainWindow.xib in Resources */,
+				F4334D4A147E9C0B004DC63D /* Icon@2x.png in Resources */,
+				F4334D4B147E9C0B004DC63D /* Icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -416,6 +464,7 @@
 				F452245C147E88BB000A94F5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
