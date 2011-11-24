@@ -1,0 +1,261 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F4522447147E88BB000A94F5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4522446147E88BB000A94F5 /* UIKit.framework */; };
+		F4522449147E88BB000A94F5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4522448147E88BB000A94F5 /* Foundation.framework */; };
+		F452244B147E88BB000A94F5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F452244A147E88BB000A94F5 /* CoreGraphics.framework */; };
+		F4522451147E88BB000A94F5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F452244F147E88BB000A94F5 /* InfoPlist.strings */; };
+		F4522453147E88BB000A94F5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F4522452147E88BB000A94F5 /* main.m */; };
+		F4522457147E88BB000A94F5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F4522456147E88BB000A94F5 /* AppDelegate.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		F4522442147E88BB000A94F5 /* UCLRadio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UCLRadio.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4522446147E88BB000A94F5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		F4522448147E88BB000A94F5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		F452244A147E88BB000A94F5 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		F452244E147E88BB000A94F5 /* UCLRadio-Info.plist */ = {isa = PBXFileReference; path = "UCLRadio-Info.plist"; sourceTree = "<group>"; };
+		F4522450147E88BB000A94F5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F4522452147E88BB000A94F5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F4522454147E88BB000A94F5 /* UCLRadio-Prefix.pch */ = {isa = PBXFileReference; path = "UCLRadio-Prefix.pch"; sourceTree = "<group>"; };
+		F4522455147E88BB000A94F5 /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		F4522456147E88BB000A94F5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F452243F147E88BB000A94F5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F4522447147E88BB000A94F5 /* UIKit.framework in Frameworks */,
+				F4522449147E88BB000A94F5 /* Foundation.framework in Frameworks */,
+				F452244B147E88BB000A94F5 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F4522437147E88BB000A94F5 = {
+			isa = PBXGroup;
+			children = (
+				F452244C147E88BB000A94F5 /* UCLRadio */,
+				F4522445147E88BB000A94F5 /* Frameworks */,
+				F4522443147E88BB000A94F5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F4522443147E88BB000A94F5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F4522442147E88BB000A94F5 /* UCLRadio.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F4522445147E88BB000A94F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F4522446147E88BB000A94F5 /* UIKit.framework */,
+				F4522448147E88BB000A94F5 /* Foundation.framework */,
+				F452244A147E88BB000A94F5 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F452244C147E88BB000A94F5 /* UCLRadio */ = {
+			isa = PBXGroup;
+			children = (
+				F4522455147E88BB000A94F5 /* AppDelegate.h */,
+				F4522456147E88BB000A94F5 /* AppDelegate.m */,
+				F452244D147E88BB000A94F5 /* Supporting Files */,
+			);
+			path = UCLRadio;
+			sourceTree = "<group>";
+		};
+		F452244D147E88BB000A94F5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F452244E147E88BB000A94F5 /* UCLRadio-Info.plist */,
+				F452244F147E88BB000A94F5 /* InfoPlist.strings */,
+				F4522452147E88BB000A94F5 /* main.m */,
+				F4522454147E88BB000A94F5 /* UCLRadio-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F4522441147E88BB000A94F5 /* UCLRadio */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F452245A147E88BB000A94F5 /* Build configuration list for PBXNativeTarget "UCLRadio" */;
+			buildPhases = (
+				F452243E147E88BB000A94F5 /* Sources */,
+				F452243F147E88BB000A94F5 /* Frameworks */,
+				F4522440147E88BB000A94F5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = UCLRadio;
+			productName = UCLRadio;
+			productReference = F4522442147E88BB000A94F5 /* UCLRadio.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F4522439147E88BB000A94F5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = F452243C147E88BB000A94F5 /* Build configuration list for PBXProject "UCLRadio" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = F4522437147E88BB000A94F5;
+			productRefGroup = F4522443147E88BB000A94F5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F4522441147E88BB000A94F5 /* UCLRadio */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F4522440147E88BB000A94F5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F4522451147E88BB000A94F5 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F452243E147E88BB000A94F5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F4522453147E88BB000A94F5 /* main.m in Sources */,
+				F4522457147E88BB000A94F5 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		F452244F147E88BB000A94F5 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F4522450147E88BB000A94F5 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F4522458147E88BB000A94F5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		F4522459147E88BB000A94F5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F452245B147E88BB000A94F5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "UCLRadio/UCLRadio-Prefix.pch";
+				INFOPLIST_FILE = "UCLRadio/UCLRadio-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		F452245C147E88BB000A94F5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "UCLRadio/UCLRadio-Prefix.pch";
+				INFOPLIST_FILE = "UCLRadio/UCLRadio-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F452243C147E88BB000A94F5 /* Build configuration list for PBXProject "UCLRadio" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F4522458147E88BB000A94F5 /* Debug */,
+				F4522459147E88BB000A94F5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F452245A147E88BB000A94F5 /* Build configuration list for PBXNativeTarget "UCLRadio" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F452245B147E88BB000A94F5 /* Debug */,
+				F452245C147E88BB000A94F5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F4522439147E88BB000A94F5 /* Project object */;
+}
