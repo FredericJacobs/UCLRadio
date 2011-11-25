@@ -99,7 +99,6 @@
 - (void)tableView:(UITableView *)table didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     self.detailController.show = [shows objectAtIndex:indexPath.row];
     [self.navigationController pushViewController:self.detailController animated:YES];
-    
 }
 
     

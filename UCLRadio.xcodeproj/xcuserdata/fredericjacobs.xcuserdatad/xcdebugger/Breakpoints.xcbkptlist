@@ -9,11 +9,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "UCLRadio/AppDelegate.m"
-         timestampString = "343905227.295857"
+         timestampString = "343934420.21008"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "38"
-         endingLineNumber = "38"
+         startingLineNumber = "67"
+         endingLineNumber = "67"
          landmarkName = "-parseShowIntoNSDateWeekOne:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -23,11 +23,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "UCLRadio/AppDelegate.m"
-         timestampString = "343905227.295857"
+         timestampString = "343934420.21008"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "57"
-         endingLineNumber = "57"
+         startingLineNumber = "86"
+         endingLineNumber = "86"
          landmarkName = "-parseShowIntoNSDateWeekOne:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -37,11 +37,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "UCLRadio/AppDelegate.m"
-         timestampString = "343905983.231401"
+         timestampString = "343934420.21008"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "158"
-         endingLineNumber = "158"
+         startingLineNumber = "187"
+         endingLineNumber = "187"
          landmarkName = "-updateNotifications"
          landmarkType = "5">
       </FileBreakpoint>
@@ -51,12 +51,26 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "UCLRadio/AppDelegate.m"
-         timestampString = "343860470.736742"
+         timestampString = "343934420.21008"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "18"
-         endingLineNumber = "18"
+         startingLineNumber = "47"
+         endingLineNumber = "47"
          landmarkName = "-applicationDidBecomeActive:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         isPathRelative = "1"
+         filePath = "Show.m"
+         timestampString = "343932820.54397"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "31"
+         endingLineNumber = "31"
+         landmarkName = "+fromString:"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>

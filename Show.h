@@ -21,6 +21,7 @@
 @property (nonatomic, copy) NSString *endTime;
 
 - (NSComparisonResult) compareWithAnotherShow:(Show*) anotherShow;
-
++ (NSString *) toString: (Show *)aShow;
++ (Show *) fromString : (NSString*) aString;
 
 @end

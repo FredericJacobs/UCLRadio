@@ -7,8 +7,37 @@
 @synthesize viewController, secondViewController, subscribedShows;
 
 - (void) initializeArray {
+
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES);
+    NSString *libraryDirectory = [paths objectAtIndex:0];
+    NSString *filePath =  [libraryDirectory stringByAppendingPathComponent:@"Subscriptions.txt"];
     subscribedShows = [[NSMutableArray alloc] initWithCapacity:1000];
+    
+    if ([[NSFileManager defaultManager] fileExistsAtPath:filePath]){
+    
+        NSMutableArray *restoreArray = [NSMutableArray arrayWithContentsOfFile:filePath];
+        for ( int i = 0; i < [restoreArray count]; i++) {
+            [subscribedShows addObject:[Show fromString:[restoreArray objectAtIndex:i]]];
+        }
+        
+    }
+    
+    
     [self updateNotifications];
+}
+
+- (void) saveToDisk {
+    
+    NSMutableArray *toBeSaved = [[NSMutableArray alloc ] initWithCapacity:1000]; 
+    for (int i = 0 ; i < [subscribedShows count] ; i++){
+        [toBeSaved addObject:[Show toString:[subscribedShows objectAtIndex:i]]];
+    }
+    
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES);
+    NSString *libraryDirectory = [paths objectAtIndex:0];
+    NSString *filePath =  [libraryDirectory stringByAppendingPathComponent:@"Subscriptions.txt"];
+    
+    [toBeSaved writeToFile:filePath atomically:YES];
     
 }
 
@@ -101,7 +130,7 @@
     
     else {
         for (int i=0; i < [subscribedShows count]; i++){
-            if ( [newShow name] == [[subscribedShows objectAtIndex:i]name]){
+            if ([[newShow name] isEqualToString:[[subscribedShows objectAtIndex:i]name]]){
                 isSubscribed = TRUE;
             }
             
@@ -157,6 +186,8 @@
     for (int i=0; i < [subscribedShows count]; i++){
         [self makeLocalNotificationOne:[subscribedShows objectAtIndex:i]];
     }
+    
+    [self saveToDisk];
     
     
 }
