@@ -21,19 +21,16 @@
 
 - (void) removeShow:(Show *)newShow{
     
-    
-    for (int i=0; i < [subscribedShows count]; i++){
-            
-    if ( [newShow name] == [[subscribedShows objectAtIndex:i]name]){
-        [subscribedShows removeObjectAtIndex:i];
+    if ([self isSubscribedTo:newShow]) {
+        
+        for (int i=0; i < [subscribedShows count]; i++){
+        
+            if ( [newShow name] == [[subscribedShows objectAtIndex:i]name]){
+                [subscribedShows removeObjectAtIndex:i];
             }
             
-            else {
-                
-                NSLog(@"Remove Bug");
-                
-            }
         }
+    }
     
     [self updateNotifications] ;
 }
@@ -43,7 +40,7 @@
     NSCalendar *gregorian = [[NSCalendar alloc]
                              initWithCalendarIdentifier:NSGregorianCalendar];
     NSDateComponents *weekdayComponents =[gregorian components:NSWeekdayCalendarUnit fromDate:myDate];
-    NSTimeZone *london = [[NSTimeZone timeZoneWithAbbreviation:@"GMT"] autorelease];
+    NSTimeZone *london = [NSTimeZone timeZoneWithAbbreviation:@"GMT"];
     [weekdayComponents setTimeZone:london];
     [weekdayComponents setWeekday:[[aShow dayOfTheWeek] intValue]];
     [weekdayComponents setHour:[[aShow startTime] intValue]-1];
@@ -103,19 +100,19 @@
     }
     
     else {
-        
         for (int i=0; i < [subscribedShows count]; i++){
-            
             if ( [newShow name] == [[subscribedShows objectAtIndex:i]name]){
                 isSubscribed = TRUE;
             }
             
             else {
-                isSubscribed = FALSE;
+                
             }
         }
     }
+    NSLog(@"Returned %d", isSubscribed);
     return isSubscribed;
+
 }
 
 - (void) addShow: (Show *)newShow {
@@ -130,7 +127,7 @@
     else {
         for (int i=0; i < [subscribedShows count]; i++){
 
-            if ( [newShow name] == [[subscribedShows objectAtIndex:i]name])
+            if ([self isSubscribedTo:newShow])
             {
         
                 NSLog(@"This is a duplicate");
