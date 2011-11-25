@@ -77,6 +77,7 @@
     [self performSelectorOnMainThread:@selector(downloadStarted) withObject:nil waitUntilDone:NO];
     if (rssConnection != nil) {
         do {
+            
             [[NSRunLoop currentRunLoop] runMode:NSDefaultRunLoopMode beforeDate:[NSDate distantFuture]];
         } while (!done);
     }
@@ -127,7 +128,7 @@
 
 #pragma mark Parsing support methods
 
-static const NSUInteger kAutoreleasePoolPurgeFrequency = 20;
+static const NSUInteger kAutoreleasePoolPurgeFrequency = 100;
 
 - (void)finishedCurrentShow {
     [self performSelectorOnMainThread:@selector(parsedShow:) withObject:currentShow waitUntilDone:NO];

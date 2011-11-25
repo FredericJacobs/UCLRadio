@@ -644,7 +644,10 @@
     
     else 
         NSLog(@"Fail to initiate date");
+
+
 }
+
 
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object
@@ -703,16 +706,15 @@
     Class twClass = NSClassFromString(@"TWTweetComposeViewController");
     if (!twClass){ // Framework not available, older iOS
         
-        UIAlertView *alert = [UIAlertView alloc];
+        UIAlertView *alert = [[UIAlertView alloc] autorelease];
         [alert initWithTitle:@"Update Required" message:@"This functionallity requires iOS 5.0 or higher." delegate: self cancelButtonTitle:@"Dismiss" otherButtonTitles:nil , nil];
     
         [alert show];
-        
-        return;
+
     
     }
     if (twClass){ 
-    NSURL *rareFMURL = [NSURL alloc];
+    NSURL *rareFMURL = [[NSURL alloc] autorelease];
     [rareFMURL initWithString:@"http://www.rarefm.co.uk/"];
     TWTweetComposeViewController *tweetSheet = [[TWTweetComposeViewController alloc] init];
     [tweetSheet setInitialText:@"I'm listening to RareFM. It rocks. Go ahead and download the app ! "];

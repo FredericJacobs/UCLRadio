@@ -43,7 +43,7 @@
     NSCalendar *gregorian = [[NSCalendar alloc]
                              initWithCalendarIdentifier:NSGregorianCalendar];
     NSDateComponents *weekdayComponents =[gregorian components:NSWeekdayCalendarUnit fromDate:myDate];
-    NSTimeZone *london = [NSTimeZone timeZoneWithAbbreviation:@"GMT"];
+    NSTimeZone *london = [[NSTimeZone timeZoneWithAbbreviation:@"GMT"] autorelease];
     [weekdayComponents setTimeZone:london];
     [weekdayComponents setWeekday:[[aShow dayOfTheWeek] intValue]];
     [weekdayComponents setHour:[[aShow startTime] intValue]-1];
@@ -96,7 +96,7 @@
 
 - (BOOL) isSubscribedTo: (Show*)newShow{
     
-    BOOL isSubscribed;
+    BOOL isSubscribed = FALSE;
     
     if ([subscribedShows count] == 0){
         isSubscribed = FALSE;   
