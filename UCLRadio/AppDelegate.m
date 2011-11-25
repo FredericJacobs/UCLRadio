@@ -12,6 +12,13 @@
     
 }
 
+- (void)applicationDidBecomeActive:(UIApplication *)application{
+    
+
+    
+    
+}
+
 - (void) removeShow:(Show *)newShow{
     
     
@@ -66,7 +73,7 @@
     localNotif.timeZone = [NSTimeZone timeZoneWithAbbreviation:@"GMT"];
     
     localNotif.alertBody = [NSString stringWithFormat:NSLocalizedString(@"%@ in 5 minutes.", [aShow name])];
-    localNotif.alertAction = NSLocalizedString(@"Play it !", nil);
+    localNotif.alertAction = NSLocalizedString(@"Tune In !", nil);
     
     localNotif.soundName = UILocalNotificationDefaultSoundName;
     localNotif.applicationIconBadgeNumber = 1;
