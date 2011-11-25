@@ -20,5 +20,7 @@
 @property (nonatomic, copy) NSString *startTime;
 @property (nonatomic, copy) NSString *endTime;
 
+- (NSComparisonResult) compareWithAnotherShow:(Show*) anotherShow;
+
 
 @end

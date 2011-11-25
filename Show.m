@@ -12,7 +12,9 @@
 
 @synthesize name, endTime, startTime,dayOfTheWeek;
 
-
-
+- (NSComparisonResult) compareWithAnotherShow:(Show*) anotherShow{
+   
+   return [[self name] compare:[anotherShow name]];
+}
 
 @end

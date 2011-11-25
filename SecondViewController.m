@@ -86,6 +86,9 @@
         cell.textLabel.font = [UIFont boldSystemFontOfSize:14.0];
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     }
+    
+    [shows sortUsingSelector:@selector(compareWithAnotherShow:)];
+    
     cell.textLabel.text = [[shows objectAtIndex:indexPath.row] name];    
     return cell;
     

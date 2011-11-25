@@ -79,11 +79,11 @@
     switch (indexPath.row) {
         case 1: {
             cell.textLabel.text = NSLocalizedString(@"Starts at ", @"album label");
-            cell.detailTextLabel.text = show.startTime;
+            cell.detailTextLabel.text = [[show startTime] stringByAppendingFormat:@":00"]; ;
         } break;
         case 2: {
             cell.textLabel.text = NSLocalizedString(@"Ends at", @"artist label");
-            cell.detailTextLabel.text = show.endTime;
+            cell.detailTextLabel.text = [[show endTime] stringByAppendingFormat:@":00"];
         } break;
         case 0: {
             cell.textLabel.text = NSLocalizedString(@"Weekday", @"category label");
