@@ -9,54 +9,12 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "UCLRadio/AppDelegate.m"
-         timestampString = "343934420.21008"
+         timestampString = "344022547.77266"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "67"
-         endingLineNumber = "67"
-         landmarkName = "-parseShowIntoNSDateWeekOne:"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         isPathRelative = "1"
-         filePath = "UCLRadio/AppDelegate.m"
-         timestampString = "343934420.21008"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "86"
-         endingLineNumber = "86"
-         landmarkName = "-parseShowIntoNSDateWeekOne:"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         isPathRelative = "1"
-         filePath = "UCLRadio/AppDelegate.m"
-         timestampString = "343934420.21008"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "187"
-         endingLineNumber = "187"
-         landmarkName = "-updateNotifications"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         isPathRelative = "1"
-         filePath = "UCLRadio/AppDelegate.m"
-         timestampString = "343934420.21008"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "47"
-         endingLineNumber = "47"
-         landmarkName = "-applicationDidBecomeActive:"
+         startingLineNumber = "233"
+         endingLineNumber = "233"
+         landmarkName = "-addShow:"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint

@@ -38,14 +38,36 @@
     NSString *filePath =  [libraryDirectory stringByAppendingPathComponent:@"Subscriptions.txt"];
     
     [toBeSaved writeToFile:filePath atomically:YES];
+    [toBeSaved release];
     
 }
 
-- (void)applicationDidBecomeActive:(UIApplication *)application{
-    
+-(void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification{
+    UIAlertView *alert = [UIAlertView alloc];
+    [alert initWithTitle:@"Don't miss your show !" message:notification.alertBody delegate: self cancelButtonTitle:@"Tune In" otherButtonTitles:nil , nil];
+    [alert show];
+    [self updateNotifications];    
+    [[UIApplication sharedApplication] setApplicationIconBadgeNumber:0];
+}
 
+- (void) applicationSignificantTimeChange:(UIApplication *)application{
     
+    [self updateNotifications];
     
+}
+
+
+-(void) applicationWillEnterForeground:(UIApplication *)application{
+
+    [[UIApplication sharedApplication] setApplicationIconBadgeNumber:0];
+    [self updateNotifications];
+    
+}
+
+-(void) applicationDidFinishLaunching:(UIApplication *)application{
+    
+    [[UIApplication sharedApplication] setApplicationIconBadgeNumber:0];
+
 }
 
 - (void) removeShow:(Show *)newShow{
@@ -54,7 +76,7 @@
         
         for (int i=0; i < [subscribedShows count]; i++){
         
-            if ( [newShow name] == [[subscribedShows objectAtIndex:i]name]){
+            if ( [[newShow name] isEqualToString:[[subscribedShows objectAtIndex:i]name]]){
                 [subscribedShows removeObjectAtIndex:i];
             }
             
@@ -64,52 +86,89 @@
     [self updateNotifications] ;
 }
 
-- (NSDate *) parseShowIntoNSDateWeekOne: (Show *)aShow {
-    NSDate *myDate = [NSDate date];
-    NSCalendar *gregorian = [[NSCalendar alloc]
-                             initWithCalendarIdentifier:NSGregorianCalendar];
-    NSDateComponents *weekdayComponents =[gregorian components:NSWeekdayCalendarUnit fromDate:myDate];
-    NSTimeZone *london = [NSTimeZone timeZoneWithAbbreviation:@"GMT"];
-    [weekdayComponents setTimeZone:london];
-    [weekdayComponents setWeekday:[[aShow dayOfTheWeek] intValue]];
-    [weekdayComponents setHour:[[aShow startTime] intValue]-1];
-    [weekdayComponents setMinute:55];
-    
-    NSDate *notificationDate = [weekdayComponents date];
+- (NSDate *) parseShowIntoNSDate: (Show *)aShow {
 
-    while ([notificationDate timeIntervalSinceDate:myDate]>0){
-        [weekdayComponents setWeek:([weekdayComponents week]+1)];
-        notificationDate =[weekdayComponents date];
+    NSDate *today = [NSDate date];
+    
+    NSDate *show = [NSDate alloc];
+    
+    NSDateComponents *showComponents = [[NSDateComponents alloc] init];
+    
+    if ([[aShow startTime] integerValue] == 0 )
+    {
+        if ([[aShow dayOfTheWeek] integerValue] == 1){
+            
+            [showComponents setWeekday:7];
+            [showComponents setHour:23];
+            
+        }
+        
+        else {
+            
+            [showComponents setWeekday:([[aShow dayOfTheWeek] integerValue]-1)];
+            [showComponents setHour:23];
+        }
         
     }
-
-    return notificationDate;
     
+    else {
+        
+        [showComponents setWeekday:[[aShow dayOfTheWeek] integerValue]];
+        [showComponents setHour:([[aShow startTime] integerValue]- 1)];
+        
+    }
+    
+    [showComponents setMinute:55];
+    [showComponents setYear:[[[NSCalendar currentCalendar] components:NSYearCalendarUnit fromDate:today] year]];
+    [showComponents setWeek:[[[NSCalendar currentCalendar] components:NSWeekCalendarUnit fromDate:today] week]];
+    NSCalendar *gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
+    [showComponents setWeek:[[[NSCalendar currentCalendar] components: NSWeekCalendarUnit fromDate:today] week]];
+    
+    show = [gregorian dateFromComponents:showComponents];
+    
+    // Support for TimeZone 
+    
+    NSTimeZone *sourceTimeZone = [NSTimeZone timeZoneWithAbbreviation:@"GMT"];
+    NSTimeZone *destinationTimeZone = [NSTimeZone systemTimeZone];
+    NSInteger destinationGMTOffset = [destinationTimeZone secondsFromGMTForDate:show];
+    NSInteger sourceGMTOffset = [sourceTimeZone secondsFromGMTForDate:show];
+    NSTimeInterval interval = destinationGMTOffset - sourceGMTOffset ; 
+    return [self returnAFutureDate:[[NSDate alloc]initWithTimeInterval:interval sinceDate:show]];
+    
+}
+
+- (NSDate *) returnAFutureDate: (NSDate*) aDate {
+    // Check if date already happened if yes return a date one week later 
+    while ([aDate timeIntervalSinceNow] < 0){
+        //Rescheldule next week 
+        aDate = [aDate dateByAddingTimeInterval:604800];
+    }
+    return aDate;
 }
 
 
 
 - (void) makeLocalNotificationOne: (Show *)aShow{
-    NSDate *itemDate = [self parseShowIntoNSDateWeekOne:aShow];
+    
+    NSDate *itemDate = [self parseShowIntoNSDate:aShow];
     
     UILocalNotification *localNotif = [[UILocalNotification alloc] init];
     if (localNotif == nil)
         return;
     localNotif.fireDate = itemDate;
-    localNotif.timeZone = [NSTimeZone timeZoneWithAbbreviation:@"GMT"];
     
-    localNotif.alertBody = [NSString stringWithFormat:NSLocalizedString(@"%@ in 5 minutes.", [aShow name])];
+    localNotif.alertBody = [[aShow name]stringByAppendingString:(@" starts in 5 min")];
     localNotif.alertAction = NSLocalizedString(@"Tune In !", nil);
-    
     localNotif.soundName = UILocalNotificationDefaultSoundName;
     localNotif.applicationIconBadgeNumber = 1;
     
     NSDictionary *infoDict = [NSDictionary dictionaryWithObject:[aShow name] forKey:[aShow name]];
     localNotif.userInfo = infoDict;
     
+    NSLog(@"Local Notification time is %@",[itemDate description]);
+    
     [[UIApplication sharedApplication] scheduleLocalNotification:localNotif];
     [localNotif release];
-    NSLog(@"Registred for Push !");
 }
 
 - (void) printToConsole {
@@ -173,7 +232,6 @@
             }
         }
     }
-    [self printToConsole];
     [self updateNotifications];
 }
     

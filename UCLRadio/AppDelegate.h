@@ -31,6 +31,6 @@
 - (BOOL) isSubscribedTo: (Show*)newShow;
 - (void) printToConsole;
 - (void) updateNotifications;
-
+- (NSDate *) returnAFutureDate: (NSDate*) aDate;
 
 @end
