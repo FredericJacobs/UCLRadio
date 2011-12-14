@@ -17,6 +17,8 @@
 
 @implementation UCLRadioViewController
 
+@synthesize appDelegate;
+
 - (void)setButtonImage:(UIImage *)image
 {
 	[button.layer removeAllAnimations];
@@ -27,6 +29,8 @@
 
 - (void)viewDidLoad
 {
+    appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    [appDelegate getShows];
     nameOfTheShow.text = @"Not Currently Playing";
 	UIImage *image = [UIImage imageNamed:@"playbutton.png"];
 	[self setButtonImage:image];
@@ -121,13 +125,19 @@
         
 	}
 }
-- (void) setNameOfTheProgramToNill {
-    
-    nameOfTheShow.text = @"Not Currently Playing";
-    
-}
+
 
 - (void) setNameOfTheProgram {
+    if (!streamer) 
+    { 
+        nameOfTheShow.text = @"Not Currently Playing";
+        
+    }
+    
+    else {
+    
+    
+    allShows = [[NSArray alloc]initWithArray:[appDelegate getShows]];
     // Support for TimeZone 
     NSDate *now = [NSDate date];
     NSTimeZone *sourceTimeZone = [NSTimeZone timeZoneWithAbbreviation:@"GMT"];
@@ -148,493 +158,63 @@
     //find what time it is 
     NSDateComponents *components = [calendar components:NSHourCalendarUnit fromDate:today];
     NSInteger hour = [[[NSCalendar currentCalendar] components:NSHourCalendarUnit fromDate:[gregorian dateFromComponents:components]] hour];
-    //Let's do this 
- 
-    switch (weekday) {
-        case 1:{
-        //Sunday
-            
-            if (hour == 0){
-                
-                nameOfTheShow.text = @"Jack & Cameron";
-                
-            }
-            
-            if (0 <= hour | hour <10) {
-                
-                nameOfTheShow.text = @"Exposure";
-                
-            }
-            
-            if (hour == 10){
-                
-                nameOfTheShow.text = @"The Dour Hour";
-                
-            }
-            
-            if (hour == 11){
-                nameOfTheShow.text = @"Oli S.";
-            }
-            
-            if (hour == 12){
-                nameOfTheShow.text = @"Conference of the Birds";
-            }
-            
-            if (hour == 13){
-                
-                nameOfTheShow.text = @"Cream";
-            }
-            
-            if (hour == 14){
-                nameOfTheShow.text = @"The World Music Show ";
-            }
-            
-            if (hour == 15){
-                
-                nameOfTheShow.text = @"Music ABC";
-            }
-            
-            if (16 <= hour | hour < 18){
-                
-                nameOfTheShow.text = @"SRA Chart";
-            }
-            
-            if (hour == 18){
-                nameOfTheShow.text= @"Slow Centuries";
-            }
-            
-            if (hour == 19){
-                nameOfTheShow.text=@"Richard Close";
-                
-            }
-            
-            if (hour == 20) {
-                nameOfTheShow.text = @"Kris and Ally's Weekend Wondershow";
-            }
-            
-            if (hour == 21){
-                nameOfTheShow.text = @"The Sunday Show "; 
-                
-            }
-            
-            if (hour == 22){
-                
-                nameOfTheShow.text = @"The Crease";
-            }
-            
-            if (hour == 23){
-                
-                nameOfTheShow.text = @"Easy Skankin'";
-            }
-            
-            
-            
-        }break;
-        
-        case 2:{
-        //Monday    
-            if (hour == 0){
-                
-                nameOfTheShow.text = @"The Boring Student";
-                
-            }
-            
-            if ( 0 < hour | hour < 10) {
-                
-                nameOfTheShow.text = @"Euan";
-                
-            }
-            
-            if (10<= hour | hour < 12){
-                
-                nameOfTheShow.text = @"Sonti";
-                
-            }
-            
-            if (12 <= hour | hour < 14 ) {
-                
-                nameOfTheShow.text = @"Taking the P";
-            }
-            
-            if (14 <= hour | hour < 16){
-                
-                nameOfTheShow.text = @"Miles Beckswith";
-                
-            }
-            
-            if (16<= hour | hour < 18 ) {
-                
-                nameOfTheShow.text = @"Alex & Bella";
-                
-            }
-            
-            if (18 <= hour  | hour< 20){
-                
-                nameOfTheShow.text = @"We Are Your Friends";
-            }
-            
-            if (hour == 20) {
-                
-                nameOfTheShow.text = @"TPB";
-                
-            }
-            
-            if (hour == 21){
-                
-                nameOfTheShow.text = @"Nodal Points";
-            }
-            
-            if (hour == 22){
-                
-                nameOfTheShow.text = @"The Oli Show";
-            }
-            
-            if (hour == 23)
-            {
-                
-                nameOfTheShow.text = @"Robert Heath";
-            }
-        }break;
-                
-        case 3:{
-        //Tuesday
-            
-            if (hour == 0){
-                
-                nameOfTheShow.text = @"Tropical Hour";
-                
-            }
-            
-            if (0<hour | hour<10) {
-                
-                nameOfTheShow.text = @"The Confiture";
-                
-            }
-            if (10<= hour | hour < 12){
-                
-                nameOfTheShow.text = @"The not so BBC Radio 1 Show";
-                
-            }
-            
-            if (12 <= hour | hour < 14 ) {
-                
-                nameOfTheShow.text = @"Jessica Thornhill";
-            }
-            
-            if (14 <= hour | hour < 16){
-                
-                nameOfTheShow.text = @"Thomas Smith";
-                
-            }
-            
-            if (16<= hour | hour < 18 ) {
-                
-                nameOfTheShow.text = @"Holly Harris";
-                
-            }
-            
-            if (18 <= hour | hour < 20){
-                
-                nameOfTheShow.text = @"Enter Safari";
-            }
-            
-            if (hour == 20) {
-                
-                nameOfTheShow.text = @"Unplanned Project";
-                
-            }
-            
-            if (hour == 21){
-                
-                nameOfTheShow.text = @"Ali Murray";
-            }
-            
-            if (hour == 22){
-                
-                nameOfTheShow.text = @"Sub Bass Show";
-            }
-            
-            if (hour == 23)
-            {
-                
-                nameOfTheShow.text = @"Andrej Hagan";
-            }
-
-            
-            
-        }break;
-            
-            
-        case 4:{
-        //Wednesday
-            if (hour == 0){
-                
-                nameOfTheShow.text = @"UCLBass";
-                
-            }
-            
-            if (0<hour | hour <12) {
-                
-                nameOfTheShow.text = @"Late Night with Dave";
-                
-            }
-            if (12 <= hour | hour < 14 ) {
-                
-                nameOfTheShow.text = @"PFEV/Hana White";
-            }
-            
-            if (14 <= hour  | hour < 16){
-                
-                nameOfTheShow.text = @"Chat In The Hat";
-                
-            }
-            
-            if (16<= hour | hour < 18 ) {
-                
-                nameOfTheShow.text = @"Popfixed";
-                
-            }
-            
-            if (18 <= hour | hour < 20){
-                
-                nameOfTheShow.text = @"Jules Moscovici";
-            }
-            
-            if (hour == 20) {
-                
-                nameOfTheShow.text = @"Rock Your Heart Out";
-                
-            }
-            
-            if (hour == 21){
-                
-                nameOfTheShow.text = @"Frenchie Time";
-            }
-            
-            if (hour == 22){
-                
-                nameOfTheShow.text = @"Musical Jumpers";
-            }
-            
-            if (hour == 23)
-            {
-                
-                nameOfTheShow.text = @"Seasick";
-            }
-
-            
-        }break;
-            
-            
-        case 5:{
-        //Thursday
-            if (hour == 0){
-                
-                nameOfTheShow.text = @"UCLBass";
-                
-            }
-            
-            if (0<hour | hour <12) {
-                
-                nameOfTheShow.text = @"Late Night with Dave";
-                
-            }
-            if (12 <= hour | hour < 14 ) {
-                
-                nameOfTheShow.text = @"PFEV/Hana White";
-            }
-            
-            if (14 <= hour | hour < 16){
-                
-                nameOfTheShow.text = @"Chat In The Hat";
-                
-            }
-            
-            if (16<= hour | hour < 18 ) {
-                
-                nameOfTheShow.text = @"Popfixed";
-                
-            }
-            
-            if (18 <= hour | hour < 20){
-                
-                nameOfTheShow.text = @"Jules Moscovici";
-            }
-            
-            if (hour == 20) {
-                
-                nameOfTheShow.text = @"Rock Your Heart Out";
-                
-            }
-            
-            if (hour == 21){
-                
-                nameOfTheShow.text = @"Frenchie Time";
-            }
-            
-            if (hour == 22){
-                
-                nameOfTheShow.text = @"Musical Jumpers";
-            }
-            
-            if (hour == 23)
-            {
-                
-                nameOfTheShow.text = @"Seasick";
-            }
-
-            
-        }break;
-            
-            
-        case 6:{
-        //Friday
-            if (hour == 0){
-                
-                nameOfTheShow.text = @"Lu and Em";
-                
-            }
-            
-            if (0<hour| hour<10) {
-                
-                nameOfTheShow.text = @"Soul Stew";
-            }
-            
-            if (10<= hour | hour < 12){
-                
-                nameOfTheShow.text = @"Zoe Edwards";
-                
-            }
-            
-            if (12 <= hour | hour < 14 ) {
-                
-                nameOfTheShow.text = @"Sine Language with Radio Luke";
-            }
-            
-            if (14 <= hour | hour < 16){
-                
-                nameOfTheShow.text = @"Adam Townsend";
-                
-            }
-            
-            if (16<= hour | hour < 18 ) {
-                
-                nameOfTheShow.text = @"Ritika Gupta";
-                
-            }
-            
-            if (18 <= hour | hour< 20){
-                
-                nameOfTheShow.text = @"EarGasm";
-            }
-            
-            if (hour == 20) {
-                
-                nameOfTheShow.text = @"Frankie Frost Live";
-                
-            }
-            
-            if (hour == 21){
-                
-                nameOfTheShow.text = @"Jesse Peacock and Friends";
-            }
-            
-            if (hour == 22){
-                
-                nameOfTheShow.text = @"A Night In Night Out";
-            }
-            
-            if (hour == 23)
-            {
-                
-                nameOfTheShow.text = @"Another Late Night";
-            }
-            
-
-        }break;
-            
-        case 7:{
-        //Saterday
-            
-            if (hour == 0){
-                
-                nameOfTheShow.text = @"Essential Mix";
-                
-            }
-            
-            if (0<hour| hour <10) {
-                
-                nameOfTheShow.text = @"Sam Shears";
-            }
-            
-            if (hour == 10){
-                
-                nameOfTheShow.text = @"The Classical Hour";
-                
-            }
-            
-            if (hour == 11){
-                nameOfTheShow.text = @"Full Circle";
-            }
-            
-            if (hour == 12){
-                nameOfTheShow.text = @"Medium Rare";
-            }
-            
-            if (hour == 13){
-                
-                nameOfTheShow.text = @"Reaching Dangerous Levels of Sobriety";
-            }
-            
-            if (hour == 14){
-                nameOfTheShow.text = @"The Rare Jazz Show";
-            }
-            
-            if (15 <= hour | hour < 16){
-                
-                nameOfTheShow.text = @"Film Show";
-            }
-            
-            if (hour == 17){
-                
-                nameOfTheShow.text = @"Reviews";
-            }
-            
-            if (hour == 18){
-                nameOfTheShow.text= @"Nimesh";
-            }
-            
-            if (hour == 19){
-                nameOfTheShow.text=@"Tomas Stephens";
-                
-            }
-            
-            if (hour == 20) {
-                nameOfTheShow.text = @"Hip Hop vs Indie Pop";
-            }
-            
-            if (hour == 21){
-                nameOfTheShow.text = @"Johnthan Wilson"; 
-                
-            }
-            
-            if (hour == 22){
-                
-                nameOfTheShow.text = @"Switch It Up & Edvard Nore";
-            }
-            
-            if (hour == 23){
-                
-                nameOfTheShow.text = @"Ed and Al's Footy Show";
-            }
-            
-        }break;
-            
-        default:{ nameOfTheShow.text =@"Nothing on Air ! Take a nap!";}
-        break;
-    }
     
+        NSInteger nextUpweekday = weekday; 
+        NSInteger nextUpHour = hour ;
+    
+    //Let's do this 
+        
+        for (int i=0; i < [allShows count]; i++){
+            if ([[[allShows objectAtIndex:i]dayOfTheWeek] integerValue] == weekday) {
+                
+                if (hour >= [[[allShows objectAtIndex:i] startTime] integerValue] && hour <= [[[allShows objectAtIndex:i] endTime] integerValue]){
+                    nameOfTheShow.text = [[allShows objectAtIndex:i]name];
+                    nextUpHour = [[[allShows objectAtIndex:i]endTime]integerValue];
+                    
+                    
+                    if ([[[allShows objectAtIndex:i] endTime] integerValue] == 23){
+                        
+                        nextUpHour = 00;
+                        
+                    }
+                    
+                    
+                    if ([[[allShows objectAtIndex:i] endTime] integerValue] == 00){
+                        if (weekday == 7){
+                            nextUpweekday = 1;
+                        }
+                        else {nextUpweekday ++;}
+                    }
+                    
+                    
+                for (int j=0; i < [allShows count]; j++){
+                    if ([[[allShows objectAtIndex:i]dayOfTheWeek] integerValue] == nextUpweekday) {
+                        
+                        if (nextUpHour == [[[allShows objectAtIndex:i] startTime] integerValue]){
+                            
+                            nextUp.text = [allShows objectAtIndex:j]; 
+                     
+                            
+                        }
+                    
+                        
+                    }
+
+                    
+                }
+            
+                
+            }
+            
+        }
+        
+    }
+        
 }
+}
+
+
+
 
 
 
@@ -668,7 +248,7 @@
 				waitUntilDone:NO];
             
             [audioSession setActive:FALSE error:NULL];
-             [self setNameOfTheProgramToNill];
+             [self setNameOfTheProgram];
 		}
 
 		[pool release];

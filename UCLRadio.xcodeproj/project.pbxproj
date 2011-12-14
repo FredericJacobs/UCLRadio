@@ -43,7 +43,9 @@
 		F45224CB147E9329000A94F5 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F45224C9147E927E000A94F5 /* AudioToolbox.framework */; };
 		F45224CC147E936D000A94F5 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F45224A5147E8F75000A94F5 /* AVFoundation.framework */; };
 		F45224CF147E9386000A94F5 /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F45224CD147E937C000A94F5 /* Twitter.framework */; };
+		F4A2A2AE1496A55B009B7D40 /* IsDonePlaying.m in Sources */ = {isa = PBXBuildFile; fileRef = F4A2A2AD1496A55B009B7D40 /* IsDonePlaying.m */; };
 		F4CC507B147EA8A000530C84 /* loadingbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = F4CC507A147EA8A000530C84 /* loadingbutton.png */; };
+		F4F43EAC14967D5C000A0B7F /* ShowsParser.m in Sources */ = {isa = PBXBuildFile; fileRef = F4F43EAB14967D5C000A0B7F /* ShowsParser.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -94,7 +96,11 @@
 		F45224B8147E90D6000A94F5 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		F45224C9147E927E000A94F5 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		F45224CD147E937C000A94F5 /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
+		F4A2A2AC1496A55B009B7D40 /* IsDonePlaying.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IsDonePlaying.h; sourceTree = "<group>"; };
+		F4A2A2AD1496A55B009B7D40 /* IsDonePlaying.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IsDonePlaying.m; sourceTree = "<group>"; };
 		F4CC507A147EA8A000530C84 /* loadingbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loadingbutton.png; sourceTree = "<group>"; };
+		F4F43EAA14967D5C000A0B7F /* ShowsParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowsParser.h; sourceTree = "<group>"; };
+		F4F43EAB14967D5C000A0B7F /* ShowsParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowsParser.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -209,6 +215,8 @@
 			children = (
 				F4522455147E88BB000A94F5 /* AppDelegate.h */,
 				F4522456147E88BB000A94F5 /* AppDelegate.m */,
+				F4A2A2AC1496A55B009B7D40 /* IsDonePlaying.h */,
+				F4A2A2AD1496A55B009B7D40 /* IsDonePlaying.m */,
 				F452244D147E88BB000A94F5 /* Supporting Files */,
 			);
 			path = UCLRadio;
@@ -268,6 +276,8 @@
 				F4522463147E88F5000A94F5 /* UCLRadioViewController.m */,
 				F452248C147E89BF000A94F5 /* SecondViewController.h */,
 				F452248D147E89BF000A94F5 /* SecondViewController.m */,
+				F4F43EAA14967D5C000A0B7F /* ShowsParser.h */,
+				F4F43EAB14967D5C000A0B7F /* ShowsParser.m */,
 				F452248E147E89BF000A94F5 /* SecondViewController.xib */,
 				F4522491147E8A11000A94F5 /* DetailController.h */,
 				F4522492147E8A11000A94F5 /* DetailController.m */,
@@ -363,6 +373,8 @@
 				F452248A147E8983000A94F5 /* ShowRSSParser.m in Sources */,
 				F452248F147E89BF000A94F5 /* SecondViewController.m in Sources */,
 				F4522493147E8A11000A94F5 /* DetailController.m in Sources */,
+				F4F43EAC14967D5C000A0B7F /* ShowsParser.m in Sources */,
+				F4A2A2AE1496A55B009B7D40 /* IsDonePlaying.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -386,7 +398,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CODE_SIGN_ENTITLEMENTS = "";
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -413,7 +425,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CODE_SIGN_ENTITLEMENTS = "";
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -436,8 +448,8 @@
 					armv7,
 					armv6,
 				);
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "UCLRadio/UCLRadio-Prefix.pch";
 				INFOPLIST_FILE = "UCLRadio/UCLRadio-Info.plist";
@@ -458,8 +470,8 @@
 					armv7,
 					armv6,
 				);
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "UCLRadio/UCLRadio-Prefix.pch";
 				INFOPLIST_FILE = "UCLRadio/UCLRadio-Info.plist";

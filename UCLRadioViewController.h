@@ -16,7 +16,7 @@
 #import <Twitter/TWTweetComposeViewController.h>
 #import <AVFoundation/AVFoundation.h>
 #import <AudioToolbox/AudioToolbox.h>
-
+#import "AppDelegate.h"
 
 @class AudioStreamer;
 
@@ -28,7 +28,14 @@
     IBOutlet UIButton *tweetThis;
     AVAudioSession *audioSession;
     IBOutlet UILabel *nameOfTheShow;
+    IBOutlet UILabel *nextUp;
+    AppDelegate *appDelegate;
+    NSArray *allShows; 
+     
+    
 }
+
+@property (nonatomic, retain) AppDelegate *appDelegate;
 
 - (IBAction)buttonPressed:(id)sender;
 - (IBAction)tweetButtonTapped: (id) sender;

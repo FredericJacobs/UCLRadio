@@ -7,23 +7,19 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "ShowRSSParser.h"
+#import "Show.h"
 
 @class DetailController;
 
-@interface SecondViewController : UITableViewController<ShowRSSParserDelegate>{
+@interface SecondViewController : UITableViewController{
     IBOutlet UITableView *allShows;
-    ShowRSSParser *myParser;
     NSMutableArray *shows;
     DetailController *detailController;
     
 }
 
-@property (nonatomic, retain) NSMutableArray *shows;
-@property (nonatomic, retain) ShowRSSParser *myParser;
 @property (nonatomic, retain, readonly) DetailController *detailController;
-
-- (id) init;
+@property (nonatomic, retain) NSMutableArray *shows;
 
 
 @end

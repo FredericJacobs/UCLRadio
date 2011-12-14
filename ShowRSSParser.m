@@ -26,11 +26,13 @@ static NSUInteger kCountForNotification = 10;
 }
 
 - (void)start {
+    NSLog(@"Parsing did start");
     self.startTimeReference = [NSDate timeIntervalSinceReferenceDate];
     [[NSURLCache sharedURLCache] removeAllCachedResponses];
     self.parsedShows = [NSMutableArray array];
     NSURL *url = [NSURL URLWithString:@"http://www.fredericjacobs.com/rss.xml"];
     [NSThread detachNewThreadSelector:@selector(downloadAndParse:) toTarget:self withObject:url];
+    NSLog(@"Parser runs");
 }
 
 - (void)dealloc {

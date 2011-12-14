@@ -4,7 +4,7 @@
 @implementation AppDelegate
 
 @synthesize window;
-@synthesize viewController, secondViewController, subscribedShows;
+@synthesize viewController, secondViewController, subscribedShows, allShows, myParser;
 
 - (void) initializeArray {
 
@@ -24,6 +24,12 @@
     
     
     [self updateNotifications];
+}
+
+- (NSMutableArray*) getShows{
+    
+    return [myParser getAllShows];
+
 }
 
 - (void) saveToDisk {
@@ -57,6 +63,13 @@
 }
 
 
+- (void) dismissLoadingView:(NSMutableArray*) myArray {
+    
+    allShows = [[NSMutableArray alloc]initWithArray:myArray];
+    // DISMISS View
+    
+}
+
 -(void) applicationWillEnterForeground:(UIApplication *)application{
 
     [[UIApplication sharedApplication] setApplicationIconBadgeNumber:0];
@@ -65,10 +78,27 @@
 }
 
 -(void) applicationDidFinishLaunching:(UIApplication *)application{
-    
     [[UIApplication sharedApplication] setApplicationIconBadgeNumber:0];
+    myParser = [[ShowsParser alloc] init];
+    [myParser startParsing];
+   /* 
+    UILabel *myLabel = [[UILabel alloc]initWithFrame:CGRectMake(110,200 , 100, 30)];
+    myLabel.textAlignment = UITextAlignmentCenter;
+    myLabel.text = @"Loading ... ";
+    
+    UIViewController *aViewController =[[UIViewController alloc] init];
 
+    aViewController.view = myLabel;
+    
+    
+    APPEAR VIEW DURING LOADING
+    
+    [rootViewController presentModalViewController:aViewController animated:YES];
+  
+    
+    */
 }
+
 
 - (void) removeShow:(Show *)newShow{
     

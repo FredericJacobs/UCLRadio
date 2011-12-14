@@ -77,7 +77,7 @@
 							<float key="IBUISectionFooterHeight">22</float>
 						</object>
 						<object class="IBUINavigationItem" key="IBUINavigationItem" id="93248673">
-							<string key="IBUITitle">All The Shows</string>
+							<string key="IBUITitle">All Shows</string>
 							<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						</object>
 						<reference key="IBUIParentViewController" ref="85656930"/>
