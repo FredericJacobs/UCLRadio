@@ -4,7 +4,7 @@
 @implementation AppDelegate
 
 @synthesize window;
-@synthesize viewController, secondViewController, subscribedShows, allShows, myParser;
+@synthesize subscribedShows, allShows, myParser;
 
 - (void) initializeArray {
 
@@ -80,23 +80,7 @@
 -(void) applicationDidFinishLaunching:(UIApplication *)application{
     [[UIApplication sharedApplication] setApplicationIconBadgeNumber:0];
     myParser = [[ShowsParser alloc] init];
-    [myParser startParsing];
-   /* 
-    UILabel *myLabel = [[UILabel alloc]initWithFrame:CGRectMake(110,200 , 100, 30)];
-    myLabel.textAlignment = UITextAlignmentCenter;
-    myLabel.text = @"Loading ... ";
-    
-    UIViewController *aViewController =[[UIViewController alloc] init];
-
-    aViewController.view = myLabel;
-    
-    
-    APPEAR VIEW DURING LOADING
-    
-    [rootViewController presentModalViewController:aViewController animated:YES];
-  
-    
-    */
+    [myParser startParsing];   
 }
 
 
@@ -281,7 +265,6 @@
 }
 
 - (void)dealloc {
-    [viewController release];
     [window release];
     [super dealloc];
 }

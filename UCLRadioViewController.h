@@ -18,6 +18,7 @@
 #import <AudioToolbox/AudioToolbox.h>
 #import "AppDelegate.h"
 
+
 @class AudioStreamer;
 
 @interface UCLRadioViewController : UIViewController
@@ -27,16 +28,13 @@
 	AudioStreamer *streamer;
     IBOutlet UIButton *tweetThis;
     AVAudioSession *audioSession;
-    IBOutlet UILabel *nameOfTheShow;
-    IBOutlet UILabel *nextUp;
     AppDelegate *appDelegate;
-    NSArray *allShows; 
-     
+    NSArray *allShows;
+    
     
 }
 
 @property (nonatomic, retain) AppDelegate *appDelegate;
-
 - (IBAction)buttonPressed:(id)sender;
 - (IBAction)tweetButtonTapped: (id) sender;
 @end

@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F406FACE14D16624004B7AE0 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = F406FACD14D16624004B7AE0 /* Reachability.m */; };
+		F406FAD014D1667C004B7AE0 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F406FACF14D1667C004B7AE0 /* SystemConfiguration.framework */; };
+		F406FAD414D166DE004B7AE0 /* LaunchTest.m in Sources */ = {isa = PBXBuildFile; fileRef = F406FAD214D166DE004B7AE0 /* LaunchTest.m */; };
+		F406FAD514D166DE004B7AE0 /* LaunchTest.xib in Resources */ = {isa = PBXBuildFile; fileRef = F406FAD314D166DE004B7AE0 /* LaunchTest.xib */; };
 		F4334D4A147E9C0B004DC63D /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F4334D48147E9C0B004DC63D /* Icon@2x.png */; };
 		F4334D4B147E9C0B004DC63D /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = F4334D49147E9C0B004DC63D /* Icon.png */; };
 		F4522447147E88BB000A94F5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4522446147E88BB000A94F5 /* UIKit.framework */; };
@@ -36,19 +40,27 @@
 		F4522490147E89BF000A94F5 /* SecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F452248E147E89BF000A94F5 /* SecondViewController.xib */; };
 		F4522493147E8A11000A94F5 /* DetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4522492147E8A11000A94F5 /* DetailController.m */; };
 		F4522495147E8B46000A94F5 /* UCLRadioViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4522494147E8B46000A94F5 /* UCLRadioViewController.xib */; };
-		F4522497147E8B59000A94F5 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4522496147E8B59000A94F5 /* MainWindow.xib */; };
 		F45224B6147E90CA000A94F5 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F45224B3147E90A9000A94F5 /* CFNetwork.framework */; };
 		F45224B7147E90CA000A94F5 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F45224B1147E909D000A94F5 /* QuartzCore.framework */; };
 		F45224BA147E90DF000A94F5 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F45224B8147E90D6000A94F5 /* MediaPlayer.framework */; };
 		F45224CB147E9329000A94F5 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F45224C9147E927E000A94F5 /* AudioToolbox.framework */; };
 		F45224CC147E936D000A94F5 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F45224A5147E8F75000A94F5 /* AVFoundation.framework */; };
 		F45224CF147E9386000A94F5 /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F45224CD147E937C000A94F5 /* Twitter.framework */; };
+		F4554D2D14D1DC8A00843AD1 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4554D2C14D1DC8A00843AD1 /* MainWindow.xib */; };
+		F4554D3014D1E2EE00843AD1 /* RootTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4554D2F14D1E2EE00843AD1 /* RootTabBarController.m */; };
+		F4554D3614D1F4AE00843AD1 /* arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = F4554D3514D1F4AE00843AD1 /* arrow.png */; };
 		F4A2A2AE1496A55B009B7D40 /* IsDonePlaying.m in Sources */ = {isa = PBXBuildFile; fileRef = F4A2A2AD1496A55B009B7D40 /* IsDonePlaying.m */; };
 		F4CC507B147EA8A000530C84 /* loadingbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = F4CC507A147EA8A000530C84 /* loadingbutton.png */; };
 		F4F43EAC14967D5C000A0B7F /* ShowsParser.m in Sources */ = {isa = PBXBuildFile; fileRef = F4F43EAB14967D5C000A0B7F /* ShowsParser.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F406FACC14D16624004B7AE0 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		F406FACD14D16624004B7AE0 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		F406FACF14D1667C004B7AE0 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		F406FAD114D166DE004B7AE0 /* LaunchTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LaunchTest.h; sourceTree = "<group>"; };
+		F406FAD214D166DE004B7AE0 /* LaunchTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LaunchTest.m; sourceTree = "<group>"; };
+		F406FAD314D166DE004B7AE0 /* LaunchTest.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchTest.xib; sourceTree = "<group>"; };
 		F4334D48147E9C0B004DC63D /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		F4334D49147E9C0B004DC63D /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		F4522442147E88BB000A94F5 /* UCLRadio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UCLRadio.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -89,13 +101,16 @@
 		F4522491147E8A11000A94F5 /* DetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailController.h; sourceTree = "<group>"; };
 		F4522492147E8A11000A94F5 /* DetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailController.m; sourceTree = "<group>"; };
 		F4522494147E8B46000A94F5 /* UCLRadioViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = UCLRadioViewController.xib; path = UCLRadio/UCLRadioViewController.xib; sourceTree = "<group>"; };
-		F4522496147E8B59000A94F5 /* MainWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
 		F45224A5147E8F75000A94F5 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		F45224B1147E909D000A94F5 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		F45224B3147E90A9000A94F5 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		F45224B8147E90D6000A94F5 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		F45224C9147E927E000A94F5 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		F45224CD147E937C000A94F5 /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
+		F4554D2C14D1DC8A00843AD1 /* MainWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
+		F4554D2E14D1E2EE00843AD1 /* RootTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootTabBarController.h; sourceTree = "<group>"; };
+		F4554D2F14D1E2EE00843AD1 /* RootTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootTabBarController.m; sourceTree = "<group>"; };
+		F4554D3514D1F4AE00843AD1 /* arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow.png; sourceTree = "<group>"; };
 		F4A2A2AC1496A55B009B7D40 /* IsDonePlaying.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IsDonePlaying.h; sourceTree = "<group>"; };
 		F4A2A2AD1496A55B009B7D40 /* IsDonePlaying.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IsDonePlaying.m; sourceTree = "<group>"; };
 		F4CC507A147EA8A000530C84 /* loadingbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loadingbutton.png; sourceTree = "<group>"; };
@@ -108,6 +123,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F406FAD014D1667C004B7AE0 /* SystemConfiguration.framework in Frameworks */,
 				F45224CF147E9386000A94F5 /* Twitter.framework in Frameworks */,
 				F45224CC147E936D000A94F5 /* AVFoundation.framework in Frameworks */,
 				F4522449147E88BB000A94F5 /* Foundation.framework in Frameworks */,
@@ -123,9 +139,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F406FACA14D165DA004B7AE0 /* Reachability */ = {
+			isa = PBXGroup;
+			children = (
+				F406FACC14D16624004B7AE0 /* Reachability.h */,
+				F406FACD14D16624004B7AE0 /* Reachability.m */,
+			);
+			name = Reachability;
+			sourceTree = "<group>";
+		};
 		F4334D45147E9BEA004DC63D /* Icons */ = {
 			isa = PBXGroup;
 			children = (
+				F4554D3514D1F4AE00843AD1 /* arrow.png */,
 				F4334D48147E9C0B004DC63D /* Icon@2x.png */,
 				F4334D49147E9C0B004DC63D /* Icon.png */,
 			);
@@ -176,6 +202,8 @@
 		F4522437147E88BB000A94F5 = {
 			isa = PBXGroup;
 			children = (
+				F49B652514D16CA3003A90F1 /* Launch Test */,
+				F406FACA14D165DA004B7AE0 /* Reachability */,
 				F452244C147E88BB000A94F5 /* UCLRadio */,
 				F452248B147E8990000A94F5 /* Views */,
 				F4522484147E8971000A94F5 /* Parser */,
@@ -197,6 +225,7 @@
 		F4522445147E88BB000A94F5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F406FACF14D1667C004B7AE0 /* SystemConfiguration.framework */,
 				F45224CD147E937C000A94F5 /* Twitter.framework */,
 				F45224C9147E927E000A94F5 /* AudioToolbox.framework */,
 				F45224B8147E90D6000A94F5 /* MediaPlayer.framework */,
@@ -270,7 +299,9 @@
 		F452248B147E8990000A94F5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				F4522496147E8B59000A94F5 /* MainWindow.xib */,
+				F4554D2C14D1DC8A00843AD1 /* MainWindow.xib */,
+				F4554D2E14D1E2EE00843AD1 /* RootTabBarController.h */,
+				F4554D2F14D1E2EE00843AD1 /* RootTabBarController.m */,
 				F4522494147E8B46000A94F5 /* UCLRadioViewController.xib */,
 				F4522462147E88F5000A94F5 /* UCLRadioViewController.h */,
 				F4522463147E88F5000A94F5 /* UCLRadioViewController.m */,
@@ -283,6 +314,16 @@
 				F4522492147E8A11000A94F5 /* DetailController.m */,
 			);
 			name = Views;
+			sourceTree = "<group>";
+		};
+		F49B652514D16CA3003A90F1 /* Launch Test */ = {
+			isa = PBXGroup;
+			children = (
+				F406FAD114D166DE004B7AE0 /* LaunchTest.h */,
+				F406FAD214D166DE004B7AE0 /* LaunchTest.m */,
+				F406FAD314D166DE004B7AE0 /* LaunchTest.xib */,
+			);
+			name = "Launch Test";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -350,10 +391,12 @@
 				F452247F147E8932000A94F5 /* UCLMainScreen@2x.png in Resources */,
 				F4522490147E89BF000A94F5 /* SecondViewController.xib in Resources */,
 				F4522495147E8B46000A94F5 /* UCLRadioViewController.xib in Resources */,
-				F4522497147E8B59000A94F5 /* MainWindow.xib in Resources */,
 				F4334D4A147E9C0B004DC63D /* Icon@2x.png in Resources */,
 				F4334D4B147E9C0B004DC63D /* Icon.png in Resources */,
 				F4CC507B147EA8A000530C84 /* loadingbutton.png in Resources */,
+				F406FAD514D166DE004B7AE0 /* LaunchTest.xib in Resources */,
+				F4554D2D14D1DC8A00843AD1 /* MainWindow.xib in Resources */,
+				F4554D3614D1F4AE00843AD1 /* arrow.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -375,6 +418,9 @@
 				F4522493147E8A11000A94F5 /* DetailController.m in Sources */,
 				F4F43EAC14967D5C000A0B7F /* ShowsParser.m in Sources */,
 				F4A2A2AE1496A55B009B7D40 /* IsDonePlaying.m in Sources */,
+				F406FACE14D16624004B7AE0 /* Reachability.m in Sources */,
+				F406FAD414D166DE004B7AE0 /* LaunchTest.m in Sources */,
+				F4554D3014D1E2EE00843AD1 /* RootTabBarController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

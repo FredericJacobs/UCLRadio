@@ -31,20 +31,12 @@
 {
     appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     [appDelegate getShows];
-    nameOfTheShow.text = @"Not Currently Playing";
+
 	UIImage *image = [UIImage imageNamed:@"playbutton.png"];
 	[self setButtonImage:image];
     // Registers this class as the delegate of the audio session.
 	[[AVAudioSession sharedInstance] setDelegate: self];
-	
-	NSError *myErr;
-    
-    Class twClass = NSClassFromString(@"TWTweetComposeViewController");
-    if (!twClass){ // Framework not available, older iOS
-        nameOfTheShow.font = [UIFont fontWithName:@"Arial-BoldMT" size:17];
-    }
-    
-	
+	NSError *myErr;	
     // Initialize the AVAudioSession here.
 	if (![[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayback error:&myErr]) {
         // Handle the error here.
@@ -127,97 +119,6 @@
 }
 
 
-- (void) setNameOfTheProgram {
-    if (!streamer) 
-    { 
-        nameOfTheShow.text = @"Not Currently Playing";
-        
-    }
-    
-    else {
-    
-    
-    allShows = [[NSArray alloc]initWithArray:[appDelegate getShows]];
-    // Support for TimeZone 
-    NSDate *now = [NSDate date];
-    NSTimeZone *sourceTimeZone = [NSTimeZone timeZoneWithAbbreviation:@"GMT"];
-    NSTimeZone *destinationTimeZone = [NSTimeZone systemTimeZone];
-    NSInteger destinationGMTOffset = [destinationTimeZone secondsFromGMTForDate:now];
-    NSInteger sourceGMTOffset = [sourceTimeZone secondsFromGMTForDate:now];
-    NSTimeInterval interval = sourceGMTOffset - destinationGMTOffset ; 
-    NSDate *today =[[NSDate alloc]initWithTimeInterval:interval sinceDate:now];    
-    
-    
-    //Find what today's day of the week is 
-    NSCalendar *gregorian = [[NSCalendar alloc]
-                             initWithCalendarIdentifier:NSGregorianCalendar];    
-    NSDateComponents *weekdayComponents =
-    [gregorian components:NSWeekdayCalendarUnit fromDate:today];
-    NSInteger weekday = [weekdayComponents weekday];
-    NSCalendar *calendar = [NSCalendar currentCalendar];
-    //find what time it is 
-    NSDateComponents *components = [calendar components:NSHourCalendarUnit fromDate:today];
-    NSInteger hour = [[[NSCalendar currentCalendar] components:NSHourCalendarUnit fromDate:[gregorian dateFromComponents:components]] hour];
-    
-        NSInteger nextUpweekday = weekday; 
-        NSInteger nextUpHour = hour ;
-    
-    //Let's do this 
-        
-        for (int i=0; i < [allShows count]; i++){
-            if ([[[allShows objectAtIndex:i]dayOfTheWeek] integerValue] == weekday) {
-                
-                if (hour >= [[[allShows objectAtIndex:i] startTime] integerValue] && hour <= [[[allShows objectAtIndex:i] endTime] integerValue]){
-                    nameOfTheShow.text = [[allShows objectAtIndex:i]name];
-                    nextUpHour = [[[allShows objectAtIndex:i]endTime]integerValue];
-                    
-                    
-                    if ([[[allShows objectAtIndex:i] endTime] integerValue] == 23){
-                        
-                        nextUpHour = 00;
-                        
-                    }
-                    
-                    
-                    if ([[[allShows objectAtIndex:i] endTime] integerValue] == 00){
-                        if (weekday == 7){
-                            nextUpweekday = 1;
-                        }
-                        else {nextUpweekday ++;}
-                    }
-                    
-                    
-                for (int j=0; i < [allShows count]; j++){
-                    if ([[[allShows objectAtIndex:i]dayOfTheWeek] integerValue] == nextUpweekday) {
-                        
-                        if (nextUpHour == [[[allShows objectAtIndex:i] startTime] integerValue]){
-                            
-                            nextUp.text = [allShows objectAtIndex:j]; 
-                     
-                            
-                        }
-                    
-                        
-                    }
-
-                    
-                }
-            
-                
-            }
-            
-        }
-        
-    }
-        
-}
-}
-
-
-
-
-
-
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object
 	change:(NSDictionary *)change context:(void *)context
 {
@@ -232,8 +133,7 @@
 				onThread:[NSThread mainThread]
 				withObject:[UIImage imageNamed:@"stopbutton.png"]
 				waitUntilDone:NO];
-            [audioSession setActive:TRUE error:NULL];
-            [self setNameOfTheProgram];
+            [audioSession setActive:TRUE error:NULL]; 
 		}
 		else
 		{
@@ -248,7 +148,6 @@
 				waitUntilDone:NO];
             
             [audioSession setActive:FALSE error:NULL];
-             [self setNameOfTheProgram];
 		}
 
 		[pool release];
