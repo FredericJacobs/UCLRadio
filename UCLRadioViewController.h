@@ -30,8 +30,7 @@
     AVAudioSession *audioSession;
     AppDelegate *appDelegate;
     NSArray *allShows;
-    
-    
+    IBOutlet UILabel *playingRightNow;
 }
 
 @property (nonatomic, retain) AppDelegate *appDelegate;
