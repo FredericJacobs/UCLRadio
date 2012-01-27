@@ -36,8 +36,6 @@
 		F4522483147E895A000A94F5 /* CocoaXMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = F4522482147E895A000A94F5 /* CocoaXMLParser.m */; };
 		F4522489147E8983000A94F5 /* Show.m in Sources */ = {isa = PBXBuildFile; fileRef = F4522486147E8983000A94F5 /* Show.m */; };
 		F452248A147E8983000A94F5 /* ShowRSSParser.m in Sources */ = {isa = PBXBuildFile; fileRef = F4522488147E8983000A94F5 /* ShowRSSParser.m */; };
-		F452248F147E89BF000A94F5 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F452248D147E89BF000A94F5 /* SecondViewController.m */; };
-		F4522490147E89BF000A94F5 /* SecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F452248E147E89BF000A94F5 /* SecondViewController.xib */; };
 		F4522493147E8A11000A94F5 /* DetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4522492147E8A11000A94F5 /* DetailController.m */; };
 		F4522495147E8B46000A94F5 /* UCLRadioViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4522494147E8B46000A94F5 /* UCLRadioViewController.xib */; };
 		F45224B6147E90CA000A94F5 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F45224B3147E90A9000A94F5 /* CFNetwork.framework */; };
@@ -57,6 +55,10 @@
 		F4554D4C14D215B400843AD1 /* blueArrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F4554D4414D215B400843AD1 /* blueArrow@2x.png */; };
 		F4554D4D14D215B400843AD1 /* whiteArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = F4554D4514D215B400843AD1 /* whiteArrow.png */; };
 		F4554D4E14D215B400843AD1 /* whiteArrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F4554D4614D215B400843AD1 /* whiteArrow@2x.png */; };
+		F4BFC9CE14D2EBBE00D08350 /* heart@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F4BFC9CD14D2EBBE00D08350 /* heart@2x.png */; };
+		F4BFC9D114D2EBC800D08350 /* heart.png in Resources */ = {isa = PBXBuildFile; fileRef = F4BFC9D014D2EBC800D08350 /* heart.png */; };
+		F4C624C814D2967F00A77CAB /* SubscriptionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4C624C614D2967F00A77CAB /* SubscriptionsViewController.m */; };
+		F4C624CD14D29DA700A77CAB /* ShowsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4C624CC14D29DA700A77CAB /* ShowsViewController.m */; };
 		F4CC507B147EA8A000530C84 /* loadingbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = F4CC507A147EA8A000530C84 /* loadingbutton.png */; };
 		F4F43EAC14967D5C000A0B7F /* ShowsParser.m in Sources */ = {isa = PBXBuildFile; fileRef = F4F43EAB14967D5C000A0B7F /* ShowsParser.m */; };
 /* End PBXBuildFile section */
@@ -102,9 +104,6 @@
 		F4522486147E8983000A94F5 /* Show.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Show.m; sourceTree = "<group>"; };
 		F4522487147E8983000A94F5 /* ShowRSSParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowRSSParser.h; sourceTree = "<group>"; };
 		F4522488147E8983000A94F5 /* ShowRSSParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowRSSParser.m; sourceTree = "<group>"; };
-		F452248C147E89BF000A94F5 /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		F452248D147E89BF000A94F5 /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
-		F452248E147E89BF000A94F5 /* SecondViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SecondViewController.xib; sourceTree = "<group>"; };
 		F4522491147E8A11000A94F5 /* DetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailController.h; sourceTree = "<group>"; };
 		F4522492147E8A11000A94F5 /* DetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailController.m; sourceTree = "<group>"; };
 		F4522494147E8B46000A94F5 /* UCLRadioViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = UCLRadioViewController.xib; path = UCLRadio/UCLRadioViewController.xib; sourceTree = "<group>"; };
@@ -127,6 +126,12 @@
 		F4554D4414D215B400843AD1 /* blueArrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blueArrow@2x.png"; sourceTree = "<group>"; };
 		F4554D4514D215B400843AD1 /* whiteArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = whiteArrow.png; sourceTree = "<group>"; };
 		F4554D4614D215B400843AD1 /* whiteArrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "whiteArrow@2x.png"; sourceTree = "<group>"; };
+		F4BFC9CD14D2EBBE00D08350 /* heart@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "heart@2x.png"; sourceTree = "<group>"; };
+		F4BFC9D014D2EBC800D08350 /* heart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = heart.png; sourceTree = "<group>"; };
+		F4C624C514D2967F00A77CAB /* SubscriptionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubscriptionsViewController.h; sourceTree = "<group>"; };
+		F4C624C614D2967F00A77CAB /* SubscriptionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubscriptionsViewController.m; sourceTree = "<group>"; };
+		F4C624CB14D29DA700A77CAB /* ShowsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowsViewController.h; sourceTree = "<group>"; };
+		F4C624CC14D29DA700A77CAB /* ShowsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowsViewController.m; sourceTree = "<group>"; };
 		F4CC507A147EA8A000530C84 /* loadingbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loadingbutton.png; sourceTree = "<group>"; };
 		F4F43EAA14967D5C000A0B7F /* ShowsParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowsParser.h; sourceTree = "<group>"; };
 		F4F43EAB14967D5C000A0B7F /* ShowsParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowsParser.m; sourceTree = "<group>"; };
@@ -183,6 +188,8 @@
 		F4334D4C147E9C2B004DC63D /* Tab Bar Buttons */ = {
 			isa = PBXGroup;
 			children = (
+				F4BFC9CD14D2EBBE00D08350 /* heart@2x.png */,
+				F4BFC9D014D2EBC800D08350 /* heart.png */,
 				F452246B147E8932000A94F5 /* playTabBar.png */,
 				F452246C147E8932000A94F5 /* playTabBar@2x.png */,
 				F452246D147E8932000A94F5 /* shows.png */,
@@ -319,11 +326,12 @@
 				F4522494147E8B46000A94F5 /* UCLRadioViewController.xib */,
 				F4522462147E88F5000A94F5 /* UCLRadioViewController.h */,
 				F4522463147E88F5000A94F5 /* UCLRadioViewController.m */,
-				F452248C147E89BF000A94F5 /* SecondViewController.h */,
-				F452248D147E89BF000A94F5 /* SecondViewController.m */,
+				F4C624CB14D29DA700A77CAB /* ShowsViewController.h */,
+				F4C624CC14D29DA700A77CAB /* ShowsViewController.m */,
 				F4F43EAA14967D5C000A0B7F /* ShowsParser.h */,
 				F4F43EAB14967D5C000A0B7F /* ShowsParser.m */,
-				F452248E147E89BF000A94F5 /* SecondViewController.xib */,
+				F4C624C514D2967F00A77CAB /* SubscriptionsViewController.h */,
+				F4C624C614D2967F00A77CAB /* SubscriptionsViewController.m */,
 				F4522491147E8A11000A94F5 /* DetailController.h */,
 				F4522492147E8A11000A94F5 /* DetailController.m */,
 			);
@@ -418,7 +426,6 @@
 				F452247D147E8932000A94F5 /* Tweet@2x.png in Resources */,
 				F452247E147E8932000A94F5 /* UCLMainScreen.png in Resources */,
 				F452247F147E8932000A94F5 /* UCLMainScreen@2x.png in Resources */,
-				F4522490147E89BF000A94F5 /* SecondViewController.xib in Resources */,
 				F4522495147E8B46000A94F5 /* UCLRadioViewController.xib in Resources */,
 				F4334D4A147E9C0B004DC63D /* Icon@2x.png in Resources */,
 				F4334D4B147E9C0B004DC63D /* Icon.png in Resources */,
@@ -433,6 +440,8 @@
 				F4554D4C14D215B400843AD1 /* blueArrow@2x.png in Resources */,
 				F4554D4D14D215B400843AD1 /* whiteArrow.png in Resources */,
 				F4554D4E14D215B400843AD1 /* whiteArrow@2x.png in Resources */,
+				F4BFC9CE14D2EBBE00D08350 /* heart@2x.png in Resources */,
+				F4BFC9D114D2EBC800D08350 /* heart.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -450,13 +459,14 @@
 				F4522483147E895A000A94F5 /* CocoaXMLParser.m in Sources */,
 				F4522489147E8983000A94F5 /* Show.m in Sources */,
 				F452248A147E8983000A94F5 /* ShowRSSParser.m in Sources */,
-				F452248F147E89BF000A94F5 /* SecondViewController.m in Sources */,
 				F4522493147E8A11000A94F5 /* DetailController.m in Sources */,
 				F4F43EAC14967D5C000A0B7F /* ShowsParser.m in Sources */,
 				F406FACE14D16624004B7AE0 /* Reachability.m in Sources */,
 				F406FAD414D166DE004B7AE0 /* LaunchTest.m in Sources */,
 				F4554D3014D1E2EE00843AD1 /* RootTabBarController.m in Sources */,
 				F4554D3D14D2140400843AD1 /* EGORefreshTableHeaderView.m in Sources */,
+				F4C624C814D2967F00A77CAB /* SubscriptionsViewController.m in Sources */,
+				F4C624CD14D29DA700A77CAB /* ShowsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

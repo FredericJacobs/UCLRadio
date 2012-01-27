@@ -26,8 +26,8 @@
     [self updateNotifications];
 }
 
+
 - (void) startParser {
-    
     [myParser startParsing];
 }
 
@@ -35,6 +35,26 @@
     
     return [myParser getAllShows];
 
+}
+
+- (NSArray *) getSubscriptions {
+    [subscribedShows dealloc];
+    subscribedShows = [[NSMutableArray alloc] initWithCapacity:1000];
+    
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES);
+    NSString *libraryDirectory = [paths objectAtIndex:0];
+    NSString *filePath =  [libraryDirectory stringByAppendingPathComponent:@"Subscriptions.txt"];
+    
+    if ([[NSFileManager defaultManager] fileExistsAtPath:filePath]){
+        
+        NSMutableArray *restoreArray = [NSMutableArray arrayWithContentsOfFile:filePath];
+        for ( int i = 0; i < [restoreArray count]; i++) {
+            [subscribedShows addObject:[Show fromString:[restoreArray objectAtIndex:i]]];
+        }
+        
+    }
+    
+    return [self subscribedShows];
 }
 
 - (void) saveToDisk {

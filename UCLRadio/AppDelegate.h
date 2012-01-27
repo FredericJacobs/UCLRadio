@@ -22,6 +22,7 @@
 @property (nonatomic, retain) NSMutableArray *allShows;
 @property (nonatomic, retain) ShowsParser *myParser;
 
+- (NSArray *) getSubscriptions ;
 - (void) startParser;
 - (void) addShow: (Show *)newShow ;
 - (void) removeShow: (Show*)newShow ;

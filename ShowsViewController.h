@@ -12,7 +12,7 @@
 
 @class DetailController;
 
-@interface SecondViewController : UITableViewController <EGORefreshTableHeaderDelegate>{
+@interface ShowsViewController : UITableViewController <EGORefreshTableHeaderDelegate>{
     IBOutlet UITableView *allShows;
     NSMutableArray *shows;
     DetailController *detailController;
