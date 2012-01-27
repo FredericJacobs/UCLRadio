@@ -135,6 +135,7 @@
     [super viewDidLoad];
     if (shows == nil) {
         self.shows = [NSMutableArray array];
+        
         NSLog(@"Shows is void");
     } 
     else {
@@ -154,14 +155,40 @@
     static NSString *kCellIdentifier = @"MyCell";
     UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:kCellIdentifier];
     if (cell == nil) {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:kCellIdentifier] autorelease];
-        cell.textLabel.font = [UIFont boldSystemFontOfSize:14.0];
+        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:kCellIdentifier] autorelease];
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     }
     
     [shows sortUsingSelector:@selector(compareWithAnotherShow:)];
     
-    cell.textLabel.text = [[shows objectAtIndex:indexPath.row] name];    
+    cell.textLabel.text = [[shows objectAtIndex:indexPath.row] name];
+    
+    AppDelegate *appDelegate;
+    appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    [appDelegate initializeArray];
+    
+    if([appDelegate isSubscribedTo:[shows objectAtIndex:indexPath.row]]){
+        cell.textLabel.textColor = [UIColor redColor];
+    }
+    else {
+        cell.textLabel.textColor = [UIColor blackColor];
+        
+    }
+    // Beautiful fonts on iOS5 and higher
+    
+    Class tweetClass = NSClassFromString(@"TWTweetComposeViewController"); 
+    
+    
+    
+    if (!tweetClass){
+        
+        
+    }
+    else{
+        
+        cell.textLabel.font = [UIFont fontWithName:@"Verdana-Bold" size:16];
+    }
+    
     return cell;
     
     
@@ -175,6 +202,11 @@
 
 - (void) viewDidLoad {
     [super viewDidLoad];
+    AppDelegate *appDelegate;
+    appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    
+    [appDelegate initializeArray];
+    
     if (_refreshHeaderView == nil) {
 		
 		EGORefreshTableHeaderView *view = [[EGORefreshTableHeaderView alloc] initWithFrame:CGRectMake(0.0f, 0.0f - self.tableView.bounds.size.height, self.view.frame.size.width, self.tableView.bounds.size.height)];
