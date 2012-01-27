@@ -15,8 +15,6 @@
 @synthesize internetActive, hostActive;
 
 -(void) viewDidAppear:(BOOL)animated{
-
-    
     // check for internet connection
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(checkNetworkStatus:) name:kReachabilityChangedNotification object:nil];
     

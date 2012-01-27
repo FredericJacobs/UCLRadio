@@ -102,12 +102,14 @@
     
 }
 
+
 -(void) applicationDidFinishLaunching:(UIApplication *)application{
     [[UIApplication sharedApplication] setApplicationIconBadgeNumber:0];
     myParser = [[ShowsParser alloc] init];
-    [myParser startParsing];   
-}
+    [myParser startParsing];
+    [self.window makeKeyAndVisible];
 
+}
 
 - (void) removeShow:(Show *)newShow{
     

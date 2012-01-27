@@ -10,7 +10,7 @@
 
 @implementation Show
 
-@synthesize name, endTime, startTime,dayOfTheWeek;
+@synthesize name, endTime, startTime,dayOfTheWeek, genre, description;
 
 - (NSComparisonResult) compareWithAnotherShow:(Show*) anotherShow{
    

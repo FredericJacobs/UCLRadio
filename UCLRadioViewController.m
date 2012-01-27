@@ -27,6 +27,7 @@
 		forState:0];
 }
 
+
 - (void)viewDidLoad
 {
     appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
@@ -167,6 +168,7 @@
 	[self buttonPressed:sender];
 	return NO;
 }
+
 
 - (void)tweetButtonTapped:(id)sender {
 

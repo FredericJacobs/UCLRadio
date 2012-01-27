@@ -16,6 +16,7 @@
     NSMutableArray *subscribedShows;
     NSMutableArray *allShows;
     ShowsParser *myParser;
+
 }
 @property (nonatomic, retain) IBOutlet UIWindow *window;
 @property (nonatomic, retain) NSMutableArray *subscribedShows;
@@ -32,5 +33,6 @@
 - (void) updateNotifications;
 - (NSDate *) returnAFutureDate: (NSDate*) aDate;
 - (NSMutableArray*) getShows ;
+
 
 @end

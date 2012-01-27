@@ -9,14 +9,14 @@
             buildForTesting = "YES"
             buildForRunning = "YES"
             buildForProfiling = "YES"
-            buildForArchiving = "YES"
+            buildForArchiving = "NO"
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "F4522441147E88BB000A94F5"
-               BuildableName = "UCLRadio.app"
-               BlueprintName = "UCLRadio"
-               ReferencedContainer = "container:UCLRadio.xcodeproj">
+               BuildableName = "RareFM.app"
+               BlueprintName = "RareFM"
+               ReferencedContainer = "container:RareFM.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -32,27 +32,27 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "F4522441147E88BB000A94F5"
-            BuildableName = "UCLRadio.app"
-            BlueprintName = "UCLRadio"
-            ReferencedContainer = "container:UCLRadio.xcodeproj">
+            BuildableName = "RareFM.app"
+            BlueprintName = "RareFM"
+            ReferencedContainer = "container:RareFM.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
    <LaunchAction
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.GDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.GDB"
-      launchStyle = "1"
+      launchStyle = "0"
       useCustomWorkingDirectory = "NO"
-      buildConfiguration = "Release"
+      buildConfiguration = "Debug"
       debugDocumentVersioning = "YES"
       allowLocationSimulation = "YES">
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "F4522441147E88BB000A94F5"
-            BuildableName = "UCLRadio.app"
-            BlueprintName = "UCLRadio"
-            ReferencedContainer = "container:UCLRadio.xcodeproj">
+            BuildableName = "RareFM.app"
+            BlueprintName = "RareFM"
+            ReferencedContainer = "container:RareFM.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -68,9 +68,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "F4522441147E88BB000A94F5"
-            BuildableName = "UCLRadio.app"
-            BlueprintName = "UCLRadio"
-            ReferencedContainer = "container:UCLRadio.xcodeproj">
+            BuildableName = "RareFM.app"
+            BlueprintName = "RareFM"
+            ReferencedContainer = "container:RareFM.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
