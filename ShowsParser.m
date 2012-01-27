@@ -10,7 +10,6 @@
 #import "CocoaXMLParser.h"
 
 
-
 @implementation ShowsParser
 
 @synthesize myShowRSSParser , shows;
@@ -22,9 +21,7 @@
 }
 
 - (NSMutableArray *) getAllShows{
-    
     return shows;
-    
 }
 - (void)parserDidEndParsingData:(ShowRSSParser *)parser {
     self.myShowRSSParser = nil;
@@ -33,14 +30,14 @@
 }
 
 - (void)parser:(ShowRSSParser *)parser didParseShows:(NSArray *)parsedShows{
-    
     [shows addObjectsFromArray:parsedShows];
     
 }
 
 - (void) startParsing {
-    isDoneParsing = NO ;
+    [shows dealloc];
     shows = [[NSMutableArray alloc]init ];
+    isDoneParsing = NO ;
     self.myShowRSSParser = [[[CocoaXMLParser alloc]init ]autorelease];
     myShowRSSParser.delegate = self ; 
     [myShowRSSParser start];

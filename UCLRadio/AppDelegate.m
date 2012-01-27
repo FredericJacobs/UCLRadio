@@ -26,6 +26,11 @@
     [self updateNotifications];
 }
 
+- (void) startParser {
+    
+    [myParser startParsing];
+}
+
 - (NSMutableArray*) getShows{
     
     return [myParser getAllShows];

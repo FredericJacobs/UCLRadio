@@ -48,7 +48,15 @@
 		F45224CF147E9386000A94F5 /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F45224CD147E937C000A94F5 /* Twitter.framework */; };
 		F4554D2D14D1DC8A00843AD1 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4554D2C14D1DC8A00843AD1 /* MainWindow.xib */; };
 		F4554D3014D1E2EE00843AD1 /* RootTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4554D2F14D1E2EE00843AD1 /* RootTabBarController.m */; };
-		F4554D3614D1F4AE00843AD1 /* arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = F4554D3514D1F4AE00843AD1 /* arrow.png */; };
+		F4554D3D14D2140400843AD1 /* EGORefreshTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = F4554D3C14D2140400843AD1 /* EGORefreshTableHeaderView.m */; };
+		F4554D4714D215B400843AD1 /* grayArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = F4554D3F14D215B400843AD1 /* grayArrow.png */; };
+		F4554D4814D215B400843AD1 /* grayArrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F4554D4014D215B400843AD1 /* grayArrow@2x.png */; };
+		F4554D4914D215B400843AD1 /* blackArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = F4554D4114D215B400843AD1 /* blackArrow.png */; };
+		F4554D4A14D215B400843AD1 /* blackArrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F4554D4214D215B400843AD1 /* blackArrow@2x.png */; };
+		F4554D4B14D215B400843AD1 /* blueArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = F4554D4314D215B400843AD1 /* blueArrow.png */; };
+		F4554D4C14D215B400843AD1 /* blueArrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F4554D4414D215B400843AD1 /* blueArrow@2x.png */; };
+		F4554D4D14D215B400843AD1 /* whiteArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = F4554D4514D215B400843AD1 /* whiteArrow.png */; };
+		F4554D4E14D215B400843AD1 /* whiteArrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F4554D4614D215B400843AD1 /* whiteArrow@2x.png */; };
 		F4A2A2AE1496A55B009B7D40 /* IsDonePlaying.m in Sources */ = {isa = PBXBuildFile; fileRef = F4A2A2AD1496A55B009B7D40 /* IsDonePlaying.m */; };
 		F4CC507B147EA8A000530C84 /* loadingbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = F4CC507A147EA8A000530C84 /* loadingbutton.png */; };
 		F4F43EAC14967D5C000A0B7F /* ShowsParser.m in Sources */ = {isa = PBXBuildFile; fileRef = F4F43EAB14967D5C000A0B7F /* ShowsParser.m */; };
@@ -110,7 +118,16 @@
 		F4554D2C14D1DC8A00843AD1 /* MainWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
 		F4554D2E14D1E2EE00843AD1 /* RootTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootTabBarController.h; sourceTree = "<group>"; };
 		F4554D2F14D1E2EE00843AD1 /* RootTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootTabBarController.m; sourceTree = "<group>"; };
-		F4554D3514D1F4AE00843AD1 /* arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow.png; sourceTree = "<group>"; };
+		F4554D3B14D2140400843AD1 /* EGORefreshTableHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGORefreshTableHeaderView.h; sourceTree = "<group>"; };
+		F4554D3C14D2140400843AD1 /* EGORefreshTableHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGORefreshTableHeaderView.m; sourceTree = "<group>"; };
+		F4554D3F14D215B400843AD1 /* grayArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = grayArrow.png; sourceTree = "<group>"; };
+		F4554D4014D215B400843AD1 /* grayArrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "grayArrow@2x.png"; sourceTree = "<group>"; };
+		F4554D4114D215B400843AD1 /* blackArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blackArrow.png; sourceTree = "<group>"; };
+		F4554D4214D215B400843AD1 /* blackArrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blackArrow@2x.png"; sourceTree = "<group>"; };
+		F4554D4314D215B400843AD1 /* blueArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blueArrow.png; sourceTree = "<group>"; };
+		F4554D4414D215B400843AD1 /* blueArrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blueArrow@2x.png"; sourceTree = "<group>"; };
+		F4554D4514D215B400843AD1 /* whiteArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = whiteArrow.png; sourceTree = "<group>"; };
+		F4554D4614D215B400843AD1 /* whiteArrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "whiteArrow@2x.png"; sourceTree = "<group>"; };
 		F4A2A2AC1496A55B009B7D40 /* IsDonePlaying.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IsDonePlaying.h; sourceTree = "<group>"; };
 		F4A2A2AD1496A55B009B7D40 /* IsDonePlaying.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IsDonePlaying.m; sourceTree = "<group>"; };
 		F4CC507A147EA8A000530C84 /* loadingbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loadingbutton.png; sourceTree = "<group>"; };
@@ -151,7 +168,6 @@
 		F4334D45147E9BEA004DC63D /* Icons */ = {
 			isa = PBXGroup;
 			children = (
-				F4554D3514D1F4AE00843AD1 /* arrow.png */,
 				F4334D48147E9C0B004DC63D /* Icon@2x.png */,
 				F4334D49147E9C0B004DC63D /* Icon.png */,
 			);
@@ -276,6 +292,7 @@
 		F4522467147E890D000A94F5 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				F4554D3E14D215A500843AD1 /* Refresh */,
 				F4334D47147E9BF4004DC63D /* Default (Splash Screen) */,
 				F4334D45147E9BEA004DC63D /* Icons */,
 				F4334D4D147E9C47004DC63D /* Buttons */,
@@ -299,6 +316,8 @@
 		F452248B147E8990000A94F5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				F4554D3B14D2140400843AD1 /* EGORefreshTableHeaderView.h */,
+				F4554D3C14D2140400843AD1 /* EGORefreshTableHeaderView.m */,
 				F4554D2C14D1DC8A00843AD1 /* MainWindow.xib */,
 				F4554D2E14D1E2EE00843AD1 /* RootTabBarController.h */,
 				F4554D2F14D1E2EE00843AD1 /* RootTabBarController.m */,
@@ -314,6 +333,21 @@
 				F4522492147E8A11000A94F5 /* DetailController.m */,
 			);
 			name = Views;
+			sourceTree = "<group>";
+		};
+		F4554D3E14D215A500843AD1 /* Refresh */ = {
+			isa = PBXGroup;
+			children = (
+				F4554D3F14D215B400843AD1 /* grayArrow.png */,
+				F4554D4014D215B400843AD1 /* grayArrow@2x.png */,
+				F4554D4114D215B400843AD1 /* blackArrow.png */,
+				F4554D4214D215B400843AD1 /* blackArrow@2x.png */,
+				F4554D4314D215B400843AD1 /* blueArrow.png */,
+				F4554D4414D215B400843AD1 /* blueArrow@2x.png */,
+				F4554D4514D215B400843AD1 /* whiteArrow.png */,
+				F4554D4614D215B400843AD1 /* whiteArrow@2x.png */,
+			);
+			name = Refresh;
 			sourceTree = "<group>";
 		};
 		F49B652514D16CA3003A90F1 /* Launch Test */ = {
@@ -396,7 +430,14 @@
 				F4CC507B147EA8A000530C84 /* loadingbutton.png in Resources */,
 				F406FAD514D166DE004B7AE0 /* LaunchTest.xib in Resources */,
 				F4554D2D14D1DC8A00843AD1 /* MainWindow.xib in Resources */,
-				F4554D3614D1F4AE00843AD1 /* arrow.png in Resources */,
+				F4554D4714D215B400843AD1 /* grayArrow.png in Resources */,
+				F4554D4814D215B400843AD1 /* grayArrow@2x.png in Resources */,
+				F4554D4914D215B400843AD1 /* blackArrow.png in Resources */,
+				F4554D4A14D215B400843AD1 /* blackArrow@2x.png in Resources */,
+				F4554D4B14D215B400843AD1 /* blueArrow.png in Resources */,
+				F4554D4C14D215B400843AD1 /* blueArrow@2x.png in Resources */,
+				F4554D4D14D215B400843AD1 /* whiteArrow.png in Resources */,
+				F4554D4E14D215B400843AD1 /* whiteArrow@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -421,6 +462,7 @@
 				F406FACE14D16624004B7AE0 /* Reachability.m in Sources */,
 				F406FAD414D166DE004B7AE0 /* LaunchTest.m in Sources */,
 				F4554D3014D1E2EE00843AD1 /* RootTabBarController.m in Sources */,
+				F4554D3D14D2140400843AD1 /* EGORefreshTableHeaderView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

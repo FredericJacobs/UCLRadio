@@ -32,7 +32,6 @@
 - (void) viewDidLoad{
     appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     [appDelegate initializeArray];
-    
 }
 
 // When the view appears, update the title and table contents.
