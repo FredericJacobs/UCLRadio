@@ -57,7 +57,6 @@
 		F4554D4C14D215B400843AD1 /* blueArrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F4554D4414D215B400843AD1 /* blueArrow@2x.png */; };
 		F4554D4D14D215B400843AD1 /* whiteArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = F4554D4514D215B400843AD1 /* whiteArrow.png */; };
 		F4554D4E14D215B400843AD1 /* whiteArrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F4554D4614D215B400843AD1 /* whiteArrow@2x.png */; };
-		F4A2A2AE1496A55B009B7D40 /* IsDonePlaying.m in Sources */ = {isa = PBXBuildFile; fileRef = F4A2A2AD1496A55B009B7D40 /* IsDonePlaying.m */; };
 		F4CC507B147EA8A000530C84 /* loadingbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = F4CC507A147EA8A000530C84 /* loadingbutton.png */; };
 		F4F43EAC14967D5C000A0B7F /* ShowsParser.m in Sources */ = {isa = PBXBuildFile; fileRef = F4F43EAB14967D5C000A0B7F /* ShowsParser.m */; };
 /* End PBXBuildFile section */
@@ -128,8 +127,6 @@
 		F4554D4414D215B400843AD1 /* blueArrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blueArrow@2x.png"; sourceTree = "<group>"; };
 		F4554D4514D215B400843AD1 /* whiteArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = whiteArrow.png; sourceTree = "<group>"; };
 		F4554D4614D215B400843AD1 /* whiteArrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "whiteArrow@2x.png"; sourceTree = "<group>"; };
-		F4A2A2AC1496A55B009B7D40 /* IsDonePlaying.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IsDonePlaying.h; sourceTree = "<group>"; };
-		F4A2A2AD1496A55B009B7D40 /* IsDonePlaying.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IsDonePlaying.m; sourceTree = "<group>"; };
 		F4CC507A147EA8A000530C84 /* loadingbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loadingbutton.png; sourceTree = "<group>"; };
 		F4F43EAA14967D5C000A0B7F /* ShowsParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowsParser.h; sourceTree = "<group>"; };
 		F4F43EAB14967D5C000A0B7F /* ShowsParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowsParser.m; sourceTree = "<group>"; };
@@ -260,8 +257,6 @@
 			children = (
 				F4522455147E88BB000A94F5 /* AppDelegate.h */,
 				F4522456147E88BB000A94F5 /* AppDelegate.m */,
-				F4A2A2AC1496A55B009B7D40 /* IsDonePlaying.h */,
-				F4A2A2AD1496A55B009B7D40 /* IsDonePlaying.m */,
 				F452244D147E88BB000A94F5 /* Supporting Files */,
 			);
 			path = UCLRadio;
@@ -458,7 +453,6 @@
 				F452248F147E89BF000A94F5 /* SecondViewController.m in Sources */,
 				F4522493147E8A11000A94F5 /* DetailController.m in Sources */,
 				F4F43EAC14967D5C000A0B7F /* ShowsParser.m in Sources */,
-				F4A2A2AE1496A55B009B7D40 /* IsDonePlaying.m in Sources */,
 				F406FACE14D16624004B7AE0 /* Reachability.m in Sources */,
 				F406FAD414D166DE004B7AE0 /* LaunchTest.m in Sources */,
 				F4554D3014D1E2EE00843AD1 /* RootTabBarController.m in Sources */,
