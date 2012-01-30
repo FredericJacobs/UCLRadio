@@ -4,7 +4,7 @@
 @implementation AppDelegate
 
 @synthesize window;
-@synthesize subscribedShows, allShows, myParser;
+@synthesize subscribedShows, myParser, currentShow;
 
 - (void) initializeArray {
 
@@ -88,13 +88,6 @@
 }
 
 
-- (void) dismissLoadingView:(NSMutableArray*) myArray {
-    
-    allShows = [[NSMutableArray alloc]initWithArray:myArray];
-    // DISMISS View
-    
-}
-
 -(void) applicationWillEnterForeground:(UIApplication *)application{
 
     [[UIApplication sharedApplication] setApplicationIconBadgeNumber:0];
@@ -163,7 +156,6 @@
     [showComponents setYear:[[[NSCalendar currentCalendar] components:NSYearCalendarUnit fromDate:today] year]];
     [showComponents setWeek:[[[NSCalendar currentCalendar] components:NSWeekCalendarUnit fromDate:today] week]];
     NSCalendar *gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
-    [showComponents setWeek:[[[NSCalendar currentCalendar] components: NSWeekCalendarUnit fromDate:today] week]];
     
     show = [gregorian dateFromComponents:showComponents];
     
@@ -275,7 +267,48 @@
     }
     [self updateNotifications];
 }
+
+- (NSString *) getShowName {
+
+
+    NSString *nameOfTheShow;
+    NSInteger dayOfTheWeek = 0;
+    NSInteger hour;
+    NSMutableArray *shows = [NSMutableArray arrayWithArray:[myParser getAllShows]];
+        
+    // First thing to do here is to get the current number of the day, time.
     
+    
+    NSDate *today = [NSDate date];
+    
+    
+    dayOfTheWeek = [[[NSCalendar currentCalendar] components: NSWeekdayCalendarUnit fromDate:today] weekday];
+    
+    hour = [[[NSCalendar currentCalendar] components: NSHourCalendarUnit fromDate:today] hour];
+    
+    for (int i=0 ; i<[shows count]; i++){
+        if ( [[[shows objectAtIndex:i] dayOfTheWeek]integerValue] == dayOfTheWeek ) {
+            if ((hour > [[[shows objectAtIndex:i]startTime]integerValue]) |(hour = [[[shows objectAtIndex:i]startTime]integerValue])) {
+                
+                if (hour < [[[shows objectAtIndex:i] endTime]integerValue]) {
+                    
+                    nameOfTheShow = [[shows objectAtIndex:i] name];
+                    //timeUntilNextShow = (60 - ([[[NSCalendar currentCalendar] components: NSMinuteCalendarUnit fromDate:today] minute]));
+    
+                    
+                }
+            }
+        }
+        
+    }
+    return nameOfTheShow;
+
+}
+/*
+-(NSTimeInterval) nextShowLabelUpdate {
+    return timeUntilNextShow;
+}
+*/
 
 - (void) updateNotifications{
     

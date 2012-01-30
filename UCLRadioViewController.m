@@ -17,7 +17,7 @@
 
 @implementation UCLRadioViewController
 
-@synthesize appDelegate;
+@synthesize appDelegate, playingRightNow;
 
 - (void)setButtonImage:(UIImage *)image
 {
@@ -134,9 +134,12 @@
 				onThread:[NSThread mainThread]
 				withObject:[UIImage imageNamed:@"stopbutton.png"]
 				waitUntilDone:NO];
-            [audioSession setActive:TRUE error:NULL]; 
+            [audioSession setActive:TRUE error:NULL];
+            [self updatePlayingNowLabel]; 
 		}
-		else
+		
+             
+             else
 		{
 			[streamer removeObserver:self forKeyPath:@"isPlaying"];
 			[streamer release];
@@ -149,6 +152,17 @@
 				waitUntilDone:NO];
             
             [audioSession setActive:FALSE error:NULL];
+            
+            
+            [UIView animateWithDuration:0.6
+                             animations:^{playingRightNow.alpha = 0;}];
+            
+            playingRightNow.text = @"Tune In !";
+            
+            [UIView animateWithDuration:1
+                             animations:^{playingRightNow.alpha = 1;}];
+               
+            
 		}
 
 		[pool release];
@@ -157,6 +171,17 @@
 	
 	[super observeValueForKeyPath:keyPath ofObject:object change:change
 		context:context];
+}
+
+- (void) updatePlayingNowLabel {
+    [UIView animateWithDuration:0.6
+                     animations:^{playingRightNow.alpha = 0;}];
+    
+    playingRightNow.text =[appDelegate getShowName];
+
+    [UIView animateWithDuration:1
+                     animations:^{playingRightNow.alpha = 1;}];    
+    
 }
 
 - (BOOL) canBecomeFirstResponder {
@@ -171,25 +196,12 @@
 
 
 - (void)tweetButtonTapped:(id)sender {
-
-    Class twClass = NSClassFromString(@"TWTweetComposeViewController");
-    if (!twClass){ // Framework not available, older iOS
-        
-        UIAlertView *alert = [UIAlertView alloc];
-        [alert initWithTitle:@"Update Required" message:@"This functionallity requires iOS 5.0 or higher." delegate: self cancelButtonTitle:@"Dismiss" otherButtonTitles:nil , nil];
-    
-        [alert show];
-
-    
-    }
-    if (twClass){ 
     NSURL *rareFMURL = [NSURL alloc];
     [rareFMURL initWithString:@"http://www.rarefm.co.uk/"];
     TWTweetComposeViewController *tweetSheet = [[TWTweetComposeViewController alloc] init];
     [tweetSheet setInitialText:@"I'm listening to RareFM. It rocks. Go ahead and download the app ! #UCLRadioApp"];
     [tweetSheet addURL:rareFMURL];
     [self presentModalViewController:tweetSheet animated:YES];
-    }
 }
 - (void) remoteControlReceivedWithEvent: (UIEvent *) receivedEvent {
     

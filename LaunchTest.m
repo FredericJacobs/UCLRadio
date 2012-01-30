@@ -9,7 +9,7 @@
 #import "LaunchTest.h"
 #import "AppDelegate.h"
 @implementation LaunchTest
-@synthesize statusLabel;
+
 
 
 

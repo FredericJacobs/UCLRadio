@@ -30,12 +30,16 @@
     IBOutlet UIButton *tweetThis;
     AVAudioSession *audioSession;
     AppDelegate *appDelegate;
-    NSArray *allShows;
     IBOutlet UILabel *playingRightNow;
 }
 
 @property (nonatomic, retain) AppDelegate *appDelegate;
+@property (nonatomic, retain) IBOutlet UILabel *playingRightNow;
+
 - (IBAction)buttonPressed:(id)sender;
 - (IBAction)tweetButtonTapped: (id) sender;
+- (void) updatePlayingNowLabel;
+
+
 @end
 

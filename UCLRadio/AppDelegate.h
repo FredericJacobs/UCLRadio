@@ -14,14 +14,16 @@
 @interface AppDelegate : NSObject <UIApplicationDelegate> {
     UIBackgroundTaskIdentifier bgTask;
     NSMutableArray *subscribedShows;
-    NSMutableArray *allShows;
     ShowsParser *myParser;
+    NSString *currentShow;
+    NSTimeInterval timeUntilNextShow;
 
 }
 @property (nonatomic, retain) IBOutlet UIWindow *window;
 @property (nonatomic, retain) NSMutableArray *subscribedShows;
-@property (nonatomic, retain) NSMutableArray *allShows;
 @property (nonatomic, retain) ShowsParser *myParser;
+@property (nonatomic, retain) NSString *currentShow;
+
 
 - (NSArray *) getSubscriptions ;
 - (void) startParser;
@@ -33,6 +35,8 @@
 - (void) updateNotifications;
 - (NSDate *) returnAFutureDate: (NSDate*) aDate;
 - (NSMutableArray*) getShows ;
+- (NSString *) getShowName;
+- (NSTimeInterval) nextShowLabelUpdate ;
 
 
 @end

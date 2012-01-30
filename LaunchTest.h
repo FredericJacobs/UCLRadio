@@ -9,10 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface LaunchTest : UIViewController{
-    IBOutlet UILabel *statusLabel;
+
     
 }
-
-@property (nonatomic, retain) IBOutlet UILabel *statusLabel;
 
 @end

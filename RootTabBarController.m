@@ -53,6 +53,8 @@
 }
 */
 
+
+
 - (void) checkNetworkStatus:(NSNotification *)notice{
     // called after network status changes
     
@@ -66,7 +68,7 @@
             [self presentViewController:launchTest animated:NO completion:nil];
             NSLog(@"The internet is down.");
             self.internetActive = NO;
-            launchTest.statusLabel.text = @"This app needs a working internet connection to work. Relaunch the app when online.";
+
             break;
         }
         case ReachableViaWiFi:
