@@ -36,7 +36,6 @@
 - (NSDate *) returnAFutureDate: (NSDate*) aDate;
 - (NSMutableArray*) getShows ;
 - (NSString *) getShowName;
-- (NSTimeInterval) nextShowLabelUpdate ;
 
 
 @end
