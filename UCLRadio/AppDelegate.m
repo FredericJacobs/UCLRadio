@@ -271,44 +271,48 @@
 - (NSString *) getShowName {
 
 
-    NSString *nameOfTheShow;
+    NSString *nameOfTheShow = @"";
     NSInteger dayOfTheWeek = 0;
-    NSInteger hour;
+    NSInteger hour = 0;
     NSMutableArray *shows = [NSMutableArray arrayWithArray:[myParser getAllShows]];
         
     // First thing to do here is to get the current number of the day, time.
     
     
-    NSDate *today = [NSDate date];
+    NSDate *localDate = [NSDate date];// get the date
+    NSTimeInterval timeZoneOffset = [[NSTimeZone defaultTimeZone] secondsFromGMT]; // You could also use the systemTimeZone method
+    NSTimeInterval gmtTimeInterval = [localDate timeIntervalSinceReferenceDate] - timeZoneOffset;
+    NSDate *today = [NSDate dateWithTimeIntervalSinceReferenceDate:gmtTimeInterval];
+
     
     
     dayOfTheWeek = [[[NSCalendar currentCalendar] components: NSWeekdayCalendarUnit fromDate:today] weekday];
-    
+
     hour = [[[NSCalendar currentCalendar] components: NSHourCalendarUnit fromDate:today] hour];
-    
+
     for (int i=0 ; i<[shows count]; i++){
         if ( [[[shows objectAtIndex:i] dayOfTheWeek]integerValue] == dayOfTheWeek ) {
-            if ((hour > [[[shows objectAtIndex:i]startTime]integerValue]) |(hour = [[[shows objectAtIndex:i]startTime]integerValue])) {
+            if ((hour > [[[shows objectAtIndex:i]startTime]integerValue]) |(hour == [[[shows objectAtIndex:i]startTime]integerValue])) {
                 
                 if (hour < [[[shows objectAtIndex:i] endTime]integerValue]) {
                     
                     nameOfTheShow = [[shows objectAtIndex:i] name];
-                    //timeUntilNextShow = (60 - ([[[NSCalendar currentCalendar] components: NSMinuteCalendarUnit fromDate:today] minute]));
-    
                     
                 }
             }
         }
         
     }
+
+    
+    if (nameOfTheShow == @""){
+        nameOfTheShow = @"Nothing Playing Right Now";
+    }
+    
     return nameOfTheShow;
 
 }
-/*
--(NSTimeInterval) nextShowLabelUpdate {
-    return timeUntilNextShow;
-}
-*/
+
 
 - (void) updateNotifications{
     
