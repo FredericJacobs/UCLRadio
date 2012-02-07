@@ -197,7 +197,7 @@
 
 - (void)tweetButtonTapped:(id)sender {
     NSURL *rareFMURL = [NSURL alloc];
-    [rareFMURL initWithString:@"http://www.rarefm.co.uk/"];
+    [rareFMURL initWithString:@"http://itunes.apple.com/us/app/id499110759"];
     TWTweetComposeViewController *tweetSheet = [[TWTweetComposeViewController alloc] init];
     [tweetSheet setInitialText:@"I'm listening to RareFM. It rocks. Go ahead and download the app ! #UCLRadioApp"];
     [tweetSheet addURL:rareFMURL];
